@@ -9,7 +9,7 @@ class NavBar extends Component {
             <div className="NavBar">
                  
                 <Link to='/'><img className='logo' src={logo} alt="PSAC Utah Logo"/></Link>
-                <Link to='/treatmentoptions'>Treatment Options</Link>
+                <Link to='/treatmentoptions'>TREATMENT OPTIONS</Link>
                 <Link to='/payments'>PAYMENTS</Link>
                 <Link to='/faq'>FAQ</Link>
                 <Link to='/news'>NEWS</Link>

@@ -1,5 +1,5 @@
 .NavBar {
-  background-color: #0075c1;
+  background-color: grey;
   height: 10vh;
   display: flex;
   justify-content: space-around;
@@ -9,5 +9,41 @@
   width: 50px; }
 
 div {
-  color: #0075c1;
+  color: black;
   font-family: "Fjalla One"; }
+
+.mountain_div {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url(./components/mountains.jpg) no-repeat;
+  background-size: cover;
+  color: white;
+  padding-bottom: 150px; }
+
+.mountain_div h1 {
+  font-size: 60px; }
+
+.mountain_div h2 {
+  font-size: 2em; }
+
+.contact {
+  background: #0075c1;
+  font-family: "Fjalla One";
+  color: white;
+  border-color: #0075c1; }
+
+.home_navagation {
+  display: flex;
+  justify-content: space-around;
+  height: 80vh; }
+
+.navagation_div {
+  height: 50vh;
+  width: 33vw;
+  background: gray;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
