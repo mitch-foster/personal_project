@@ -1,7 +1,18 @@
+$psac_blue: #0075c1;
+$psac_font: 'Fjalla One';
+
 .NavBar {
-  background-color: slateblue;
+  background-color: $psac_blue;
   height: 10vh;
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: center; }
+
+.logo {
+  width: 50px;
+}
+
+div {
+  color: $psac_blue;
+  font-family: $psac_font;
 }

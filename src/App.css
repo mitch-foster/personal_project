@@ -1,7 +1,13 @@
 .NavBar {
-  background-color: slateblue;
+  background-color: #0075c1;
   height: 10vh;
   display: flex;
   justify-content: space-around;
-  align-items: center;
-}
+  align-items: center; }
+
+.logo {
+  width: 50px; }
+
+div {
+  color: #0075c1;
+  font-family: "Fjalla One"; }

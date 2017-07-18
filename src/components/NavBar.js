@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-import logo from './PSAC_Utah_logo.png'
+import logo from './PSAC_logo.jpg'
 
-class componentName extends Component {
+class NavBar extends Component {
     render() {
         return (
             <div className="NavBar">
-                {/* <img src={logo} alt="PSAC Utah Logo"/> */}
-                <Link to='/'>HOME</Link>
+                 
+                <Link to='/'><img className='logo' src={logo} alt="PSAC Utah Logo"/></Link>
                 <Link to='/treatmentoptions'>Treatment Options</Link>
                 <Link to='/payments'>PAYMENTS</Link>
                 <Link to='/faq'>FAQ</Link>
@@ -20,4 +20,4 @@ class componentName extends Component {
     }
 }
 
-export default componentName;
+export default NavBar;

@@ -8,6 +8,10 @@ import FAQ from './FAQ';
 import Payments from './Payments';
 import ContactUs from './ContactUs';
 import TreatmentOptions from './TreatmentOptions';
+import AdminPage from './AdminPage';
+import AdminLogin from './AdminLogin';
+import AdminNews from './AdminNews';
+import AdminBlog from './AdminBlog';
 
 export default (
   <Switch>
@@ -18,5 +22,9 @@ export default (
     <Route component={ FAQ } path="/faq" />
     <Route component={ ContactUs } path="/contactus" />
     <Route component={ TreatmentOptions } path="/treatmentoptions" />
+    <Route component={ AdminPage } path="/admin" />
+    <Route component={ AdminLogin } path="/login" />
+    <Route component={ AdminNews } path="/adminnews" />
+    <Route component={ AdminBlog } path="/adminblog" />
   </Switch>
 )
