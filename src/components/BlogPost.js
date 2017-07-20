@@ -8,16 +8,17 @@ class BlogPost extends Component {
         constructor(props){
             super(props);
             this.state = {
-                postId: this.props.params.postId,
+                postid: this.props.match.params.postid,
                 post: [],
                 loading: true,
             }
 
         }
-         componentDidMount(){
-            const URL = `http://localhost:3333/api/getblogpost/${this.state.postId}`;
+        componentDidMount(){
+            const URL = `http://localhost:3333/api/getblogpost/${this.props.match.params.postid}`;
             axios.get(URL).then(response=>{this.setState({post: response.data, loading: false})})
         }
+        
     render() {
         if(this.state.loading === true){
             return (

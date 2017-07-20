@@ -18,8 +18,8 @@ export default (
   <Switch>
     <Route component={ LandingPage } exact path="/" />
     <Route component={ News } path="/news" />
+    <Route component={ BlogPost } exact path="/blog/:postid" />
     <Route component={ Blog } path="/blog" />
-    <Route component={ BlogPost } path="/blog/:postid" />
     <Route component={ Payments } path="/payments" />
     <Route component={ FAQ } path="/faq" />
     <Route component={ ContactUs } path="/contactus" />

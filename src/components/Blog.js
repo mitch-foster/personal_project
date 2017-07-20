@@ -30,11 +30,6 @@ class Blog extends Component {
             );
         })
 
-        if(this.state.loading === false){
-            console.log(this.state.posts)
-            console.log(this.state.posts[1].title)
-        }
-
         if(this.state.loading === true){
             return (
                 <div>
