@@ -2,7 +2,7 @@ $psac_blue: #0075c1;
 $psac_font: 'Fjalla One';
 
 .NavBar {
-  background-color: grey;
+  background-color: whitesmoke;
   height: 10vh;
   display: flex;
   justify-content: space-around;
@@ -59,4 +59,9 @@ div {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.blog_div {
+  display: flex;
+  flex-direction: column;
 }

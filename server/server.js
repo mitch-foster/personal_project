@@ -14,7 +14,7 @@ massive( connectionString ).then(dbInstance => {app.set('db', dbInstance)});
 app.use(bodyParser.json());
 app.use(cors());
 
-app.get('/api/blog', ctl.getBlogPosts)
+app.get('/api/getblogposts', ctl.getBlogPosts)
 
 
 
