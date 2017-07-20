@@ -4,5 +4,14 @@ module.exports = {
         dbInstance.readBlogPosts()
             .then( posts => res.status(200).send(posts))
             .catch( err => res.status(500).send(err))
-    }
+    },
+
+    getBlogPost: (req, res, next) => {
+        const dbInstance = req.app.get('db');
+        const {params} = req;
+        dbInstance.readBlogPost([params.postid])
+            .then( posts => res.status(200).send(posts))
+            .catch( err => res.status(500).send(err))
+    },
+
 }

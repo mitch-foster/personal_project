@@ -15,6 +15,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 app.get('/api/getblogposts', ctl.getBlogPosts)
+app.get('/api/getblogpost/:postid', ctl.getBlogPost)
 
 
 

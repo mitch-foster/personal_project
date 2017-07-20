@@ -20,7 +20,7 @@ class Blog extends Component {
           const displayPosts = this.state.posts.map( (posts, i) => {
             return (
                 <div key={i} className='blog_div'>    
-                    <h1>{posts.title}</h1>
+                    <h1><a className='title_atag'>{posts.title}</a></h1>
                     <h4>{posts.date}</h4>
                     <h4>{posts.text.slice(0,300)}. . . <a>Read more</a></h4>
                 </div>

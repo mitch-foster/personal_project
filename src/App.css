@@ -54,3 +54,6 @@ div {
 .blog_div {
   display: flex;
   flex-direction: column; }
+
+.title_atag {
+  color: black; }
