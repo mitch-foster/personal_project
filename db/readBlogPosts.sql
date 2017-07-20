@@ -1,1 +1,1 @@
-select * from blog
+select * from blog order by postid desc;

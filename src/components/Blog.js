@@ -19,17 +19,17 @@ class Blog extends Component {
     render() {
           const displayPosts = this.state.posts.map( (posts, i) => {
             return (
-                <div className='blog_div'>    
+                <div key={i} className='blog_div'>    
                     <h1>{posts.title}</h1>
                     <h4>{posts.date}</h4>
-                    <h4>{posts.text}</h4>
+                    <h4>{posts.text.slice(0,300)}. . . <a>Read more</a></h4>
                 </div>
             );
         })
 
         if(this.state.loading === false){
             console.log(this.state.posts)
-            console.log(this.state.posts[0].title)
+            console.log(this.state.posts[1].title)
         }
 
         if(this.state.loading === true){
