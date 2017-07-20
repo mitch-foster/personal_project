@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import NavBar from './NavBar';
-import axios from 'axios'
+import loading from './loading.gif'
+
 
 class Blog extends Component {
 
@@ -36,6 +38,7 @@ class Blog extends Component {
             return (
                 <div>
                     <NavBar className='NavBar'/>
+                     <img src={loading}/>
                 </div>    
             )
         }
