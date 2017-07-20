@@ -34,7 +34,7 @@ class Blog extends Component {
             return (
                 <div>
                     <NavBar className='NavBar'/>
-                     <img src={loading}/>
+                     <img src={loading} alt='Loading'/>
                 </div>    
             )
         }
