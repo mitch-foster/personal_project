@@ -1,2 +1,3 @@
 insert into users (firstname, lastname, username, email, auth0id)
-vaules ($1, $2, $3, $4, $5);
+values ($1, $2, $3, $4, $5)
+RETURNING *;

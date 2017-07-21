@@ -17,7 +17,14 @@ import AdminBlog from './AdminBlog';
 export default (
   <Switch>
     <Route component={ LandingPage } exact path="/" />
-    <Route component={ News } path="/news" />
+    {/* <Route component={ News } path="/news" /> */}
+    <Route path="/news" render={ () => {
+      return (
+        <div>
+          <News props=/>
+        </div>
+      )
+    }}/>
     <Route component={ BlogPost } exact path="/blog/:postid" />
     <Route component={ Blog } path="/blog" />
     <Route component={ Payments } path="/payments" />
