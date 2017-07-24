@@ -12,8 +12,9 @@ import ContactUs from './components/ContactUs';
 import TreatmentOptions from './components/TreatmentOptions';
 import AdminPage from './components/AdminPage';
 import AdminLogin from './components/AdminLogin';
-import AdminNews from './components/AdminNews';
 import AdminBlog from './components/AdminBlog';
+import AdminBlogPost from './components/AdminBlogPost';
+import AdminNews from './components/AdminNews';
 
 
 import './App.css';
@@ -50,6 +51,7 @@ componentDidMount(){
           <Route component={ TreatmentOptions } path="/treatmentoptions" />
           <Route component={ AdminLogin } path="/login" />
           <Route path="/admin" render={ () => <AdminPage admin={this.state.admin} loading={this.state.loading}/>}/>
+          <Route exact path="/adminblog/:postid" render={ (props) => <AdminBlogPost {...props} admin={this.state.admin} loading={this.state.loading}/>} />
           <Route path="/adminblog" render={ () => <AdminBlog admin={this.state.admin} loading={this.state.loading}/>} />
           <Route path="/adminnews" render={ () => <AdminNews admin={this.state.admin} loading={this.state.loading}/>} />
         </Switch>
