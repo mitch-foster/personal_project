@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import Router from './components/Router'
 import { Switch, Route } from 'react-router-dom';
 
 import LandingPage from './components/LandingPage';
@@ -33,11 +32,7 @@ class App extends Component {
       <div>
         <Switch>
           <Route component={ LandingPage } exact path="/" />
-
-          {/* <Route component={ News } path="/news" /> */}
-
-          <Route path="/news" render={ () => <News name='john'/> }/>
-
+          <Route component={ News } path="/news" /> 
           <Route component={ BlogPost } exact path="/blog/:postid" />
           <Route component={ Blog } path="/blog" />
           <Route component={ Payments } path="/payments" />
@@ -45,11 +40,10 @@ class App extends Component {
           <Route component={ ContactUs } path="/contactus" />
           <Route component={ TreatmentOptions } path="/treatmentoptions" />
           <Route component={ AdminLogin } path="/login" />
-          <Route component={ AdminPage } path="/admin" />
-          <Route component={ AdminNews } path="/adminnews" />
-          <Route component={ AdminBlog } path="/adminblog" />
+          <Route path="/admin" render={ () => <AdminPage admin={this.state.loggedIn}/>}/>
+          <Route path="/adminblog" render={ () => <AdminBlog admin={this.state.loggedIn}/>} />
+          <Route path="/adminnews" render={ () => <AdminNews admin={this.state.loggedIn}/>} />
         </Switch>
-         {/* {Router}  */}
       </div>
     );
   }

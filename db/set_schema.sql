@@ -14,6 +14,8 @@ INSERT INTO users (firstname, lastname, username, email, auth0id)
 VALUES ('Joe', 'Foster', null, null, null);
 INSERT INTO users (firstname, lastname, username, email, auth0id)
 VALUES ('Bob', 'Foster', null, null, '1');
+INSERT INTO users (firstname, lastname, username, email, auth0id)
+VALUES ('Mitch', 'Foster', 'mitchfoster3', 'mitchfoster3@gmail.com', 'WwCqJpCVVnOnbQksfXDXAy8KfF5b54m1');
 
 CREATE TABLE blog (
     postid serial primary key,
