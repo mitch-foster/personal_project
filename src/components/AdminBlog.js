@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import {Link} from 'react-router-dom';
+import {Button} from 'react-bootstrap';
 
 import AdminNavBar from './AdminNavBar';
 import NavBar from './NavBar';
@@ -61,6 +62,9 @@ class AdminBlog extends Component {
             <div>
                 <AdminNavBar className='NavBar'/>
                 <h1>AdminBlog PAGE</h1>
+                <div>
+                    <Button>New Post</Button>
+                </div>
                 {displayAdminPosts}
             </div>
         );

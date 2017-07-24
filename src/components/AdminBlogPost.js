@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import {Button} from 'react-bootstrap';
+
 import AdminNavBar from './AdminNavBar';
 import loading from './loading.gif';
 
@@ -31,7 +33,11 @@ class BlogPost extends Component {
         return (
             <div>
                 <AdminNavBar className='NavBar'/>
-                <div className='blog_div'>    
+                <div className='blog_div'>
+                    <div>
+                        <Button>Edit Post</Button>    
+                        <Button>Delete Post</Button>    
+                    </div>
                     <h1>{this.state.post[0].title}</h1>
                     <h4>{this.state.post[0].date}</h4>
                     <h4>{this.state.post[0].text}</h4>
