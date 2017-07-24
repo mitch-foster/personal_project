@@ -15,7 +15,7 @@ class BlogPost extends Component {
 
         }
         componentDidMount(){
-            const URL = `http://localhost:3333/api/getblogpost/${this.props.match.params.postid}`;
+            const URL = `/api/getblogpost/${this.props.match.params.postid}`;
             axios.get(URL).then(response=>{this.setState({post: response.data, loading: false})})
         }
         

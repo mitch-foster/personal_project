@@ -37,41 +37,35 @@ massive( connectionString ).then(dbInstance => {
                 callbackURL: config.auth0.callbackURL
             },
             (accessToken, refreshToken, extraParams, profile, done) => {
-                console.log("PROFILE",profile._json.clientID);
-
-                dbInstance.getUser(profile._json.clientID).then( (user) => {
-                    if (user[0]){
-                        console.log('USER FOUND', user);
-                        done(null, user)
-                    } else {
-                        console.log("NOT FOUND");
-                        // dbInstance.createUser([profile.name.givenName, profile.name.familyName, profile._json.nickname, profile._json.email, profile._json.clientID])
-                        // .then((user)=> {
-                        //     console.log('CREATED USER', user[0]);
-                        //     done(null, user[0])
-                        // })
-                    }
+                dbInstance.getUser(profile._json.clientID).then((user)=>{
+                    done(null, user)
                 })
-            
                 // done(null, profile)
             }
         ))
 
 });
 
-passport.serializeUser(function(user, done) {
-  console.log('serialize', user);
+passport.serializeUser((user, done) => {
+    console.log('serialize', user);
   done(null, user);
 });
 
-passport.deserializeUser(function(user, done) {
-  console.log('deserialize', user);
+passport.deserializeUser((user, done) => {
   done(null, user);
 });
 
 app.get('/auth', passport.authenticate('auth0'));
 app.get('/auth/callback', passport.authenticate('auth0', 
 { successRedirect: 'http://localhost:3000/admin', failureRedirect: 'http://localhost:3000/login' }));
+app.get('/auth/me', (req, res) => {
+  if (req.user) return res.status(200).send(req.user);
+  res.status(200).send('No user info')
+})
+app.get('/auth/logout', (req, res) => {
+  req.logout();
+  res.redirect('http://localhost:3000/login');
+})
 
 app.get('/api/getblogposts', ctl.getBlogPosts)
 app.get('/api/getblogpost/:postid', ctl.getBlogPost)

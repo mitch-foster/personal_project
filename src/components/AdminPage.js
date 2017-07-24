@@ -1,10 +1,19 @@
 import React, { Component } from 'react';
 import AdminNavBar from './AdminNavBar';
 import NavBar from './NavBar';
+import loading from './loading.gif';
 
 class AdminPage extends Component {
     render() {
         console.log(this.props.admin)
+        if(this.props.loading === true){
+            return (
+                <div>
+                    <AdminNavBar className='NavBar'/>
+                     <img src={loading} alt='Loading'/>
+                </div>    
+            )
+        }
         if(this.props.admin === false){
             return(
                 <div>

@@ -16,7 +16,7 @@ class Blog extends Component {
     }
 
     componentDidMount(){
-        axios.get('http://localhost:3333/api/getblogposts').then(response=>{this.setState({posts: response.data, loading: false})})
+        axios.get('/api/getblogposts').then(response=>{this.setState({posts: response.data, loading: false})})
     }
 
     render() {

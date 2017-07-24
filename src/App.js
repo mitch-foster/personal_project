@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
+import axios from 'axios';
 
 import LandingPage from './components/LandingPage';
 import News from './components/News';
@@ -22,10 +23,18 @@ class App extends Component {
     super();
 
     this.state = {
-      loggedIn: false
+      admin: false,
+      loading: true
     }
   }
 
+componentDidMount(){
+  axios.get('/auth/me')
+    .then( response => {
+      response.data[0].admin === true ? this.setState({admin: true, loading: false}) : this.setState({admin: false, loading: false})
+    }
+  )
+}
 
   render() {
     return (
@@ -40,9 +49,9 @@ class App extends Component {
           <Route component={ ContactUs } path="/contactus" />
           <Route component={ TreatmentOptions } path="/treatmentoptions" />
           <Route component={ AdminLogin } path="/login" />
-          <Route path="/admin" render={ () => <AdminPage admin={this.state.loggedIn}/>}/>
-          <Route path="/adminblog" render={ () => <AdminBlog admin={this.state.loggedIn}/>} />
-          <Route path="/adminnews" render={ () => <AdminNews admin={this.state.loggedIn}/>} />
+          <Route path="/admin" render={ () => <AdminPage admin={this.state.admin} loading={this.state.loading}/>}/>
+          <Route path="/adminblog" render={ () => <AdminBlog admin={this.state.admin} loading={this.state.loading}/>} />
+          <Route path="/adminnews" render={ () => <AdminNews admin={this.state.admin} loading={this.state.loading}/>} />
         </Switch>
       </div>
     );
