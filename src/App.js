@@ -14,6 +14,7 @@ import AdminPage from './components/AdminPage';
 import AdminLogin from './components/AdminLogin';
 import AdminBlog from './components/AdminBlog';
 import AdminBlogPost from './components/AdminBlogPost';
+import AdminBlogCreatePost from './components/AdminBlogCreatePost';
 import AdminNews from './components/AdminNews';
 
 
@@ -52,6 +53,7 @@ componentDidMount(){
           <Route component={ AdminLogin } path="/login" />
           <Route path="/admin" render={ () => <AdminPage admin={this.state.admin} loading={this.state.loading}/>}/>
           <Route exact path="/adminblog/:postid" render={ (props) => <AdminBlogPost {...props} admin={this.state.admin} loading={this.state.loading}/>} />
+          <Route exact path="/adminblogcreatepost" render={ () => <AdminBlogCreatePost admin={this.state.admin} loading={this.state.loading}/>} />
           <Route path="/adminblog" render={ () => <AdminBlog admin={this.state.admin} loading={this.state.loading}/>} />
           <Route path="/adminnews" render={ () => <AdminNews admin={this.state.admin} loading={this.state.loading}/>} />
         </Switch>
