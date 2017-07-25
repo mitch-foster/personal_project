@@ -17,11 +17,17 @@ class AdminBlog extends Component {
             posts: [],
             loading: true
         }
+        this.getBlogPosts = this.getBlogPosts.bind(this);
     }
 
     componentDidMount(){
+        this.getBlogPosts();
+    }
+
+    getBlogPosts() {
         axios.get('/api/getblogposts').then(response=>{this.setState({posts: response.data, loading: false})})
     }
+
     render() {
          const displayAdminPosts = this.state.posts.map( (posts, i) => {
             return (

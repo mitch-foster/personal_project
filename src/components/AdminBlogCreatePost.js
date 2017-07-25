@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
-import axios from 'axios';
-import {Link} from 'react-router-dom';
-import {Button} from 'react-bootstrap';
 
 import AdminNavBar from './AdminNavBar';
 import NavBar from './NavBar';
-import Quill from './Quill';
+import CreateQuill from './CreateQuill';
 import loading from './loading.gif';
 
 
@@ -35,7 +32,7 @@ class AdminBlog extends Component {
                 <AdminNavBar className='NavBar'/>
                 <h1>AdminBlogCreatePost PAGE</h1>
                 <div>
-                    <Quill author={this.props.author}/>
+                    <CreateQuill author={this.props.author}/>
                 </div>
                 
             </div>

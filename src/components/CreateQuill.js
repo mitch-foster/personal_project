@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import ReactQuill from 'react-quill';
 import axios from 'axios';
-import {Button} from 'react-bootstrap';
 import theme from 'react-quill/dist/quill.snow.css'
 
 class Quill extends Component {
@@ -11,7 +10,7 @@ class Quill extends Component {
             title: '',
             date: '',
             text: '',
-            author: this.props.author 
+            authorid: this.props.author 
         }
         this.handleTitleChange = this.handleTitleChange.bind(this)
         this.handleDateChange = this.handleDateChange.bind(this)
@@ -35,7 +34,6 @@ class Quill extends Component {
     ];
     
     handleTitleChange(e) {
-        console.log('EVENT:', e.target.value)
         this.setState({ title: e.target.value })
     }
     handleDateChange(e) {
@@ -45,15 +43,12 @@ class Quill extends Component {
         this.setState({ text: value })
     }
 
-    onPostSubmit(){
+    onPostSubmit(e){
+        e.preventDefault()
         axios.post('/api/createblogpost', this.state)
     }
  
     render() {
-        console.log('TITLE:', this.state.title)
-        console.log('DATE:', this.state.date)
-        console.log('TEXT:', this.state.text)
-        console.log('AUTHOR:', this.state.author)
         return (
             <div>
                 <form action="" onSubmit={this.onPostSubmit} >
@@ -83,7 +78,7 @@ class Quill extends Component {
                             />
                         </div>
                     </div>
-                    <Button>Submit</Button>
+                    <button className='button'>Submit</button>
                 </form>
             </div>
         )

@@ -34,7 +34,7 @@ class BlogPost extends Component {
                 <div className='blog_div'>    
                     <h1>{this.state.post[0].title}</h1>
                     <h4>{this.state.post[0].date}</h4>
-                    <h4>{this.state.post[0].text}</h4>
+                    {this.state.post[0].text}
                 </div>
             </div>
         );

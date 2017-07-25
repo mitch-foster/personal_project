@@ -16,10 +16,17 @@ module.exports = {
 
     createBlogPost: (req, res, next) => {
         const dbInstance = req.app.get('db');
-        const x = req.body;
-        console.log('x:', x)
-        dbInstance.createPost([x.title, x.date, x.authorid. x.text])
-            .then(res.status(200).send('SUCCESS!'))
-            .catch( err => res.status(500).send(err))
+        console.log('req.body:', req.body)
+        dbInstance.blog.insert({
+            title: req.body.title,
+            date: req.body.date,
+            authorid: req.body.authorid,
+            text: req.body.text
+        })
+        .then(()=> res.status(200).send('SUCCESS!'))
+        .catch(err=> res.status(500).send(err))
+        // dbInstance.createPost([req.body.title, req.body.date, req.body.authorid. req.body.text])
+        //     .then(() => res.status(200).send('SUCCESS!'))
+        //     .catch( err => res.status(500).send(err))
     }
 }
