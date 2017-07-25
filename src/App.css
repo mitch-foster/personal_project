@@ -57,3 +57,11 @@ div {
 
 .title_atag {
   color: black; }
+
+.input {
+  background-color: mintcream;
+  color: black;
+  text-align: center;
+  width: 40vw;
+  margin-bottom: 3vh;
+  font-size: 120%; }

@@ -26,14 +26,15 @@ class App extends Component {
 
     this.state = {
       admin: false,
-      loading: true
+      author: null,
+      loading: true,
     }
   }
 
 componentDidMount(){
   axios.get('/auth/me')
     .then( response => {
-      response.data[0].admin === true ? this.setState({admin: true, loading: false}) : this.setState({admin: false, loading: false})
+      response.data[0].admin === true ? this.setState({admin: true, author: response.data[0].id, loading: false}) : this.setState({admin: false, author: response.data[0].id, loading: false})
     }
   )
 }
@@ -53,7 +54,7 @@ componentDidMount(){
           <Route component={ AdminLogin } path="/login" />
           <Route path="/admin" render={ () => <AdminPage admin={this.state.admin} loading={this.state.loading}/>}/>
           <Route exact path="/adminblog/:postid" render={ (props) => <AdminBlogPost {...props} admin={this.state.admin} loading={this.state.loading}/>} />
-          <Route exact path="/adminblogcreatepost" render={ () => <AdminBlogCreatePost admin={this.state.admin} loading={this.state.loading}/>} />
+          <Route exact path="/adminblogcreatepost" render={ () => <AdminBlogCreatePost admin={this.state.admin} loading={this.state.loading} author={this.state.author}/>} />
           <Route path="/adminblog" render={ () => <AdminBlog admin={this.state.admin} loading={this.state.loading}/>} />
           <Route path="/adminnews" render={ () => <AdminNews admin={this.state.admin} loading={this.state.loading}/>} />
         </Switch>

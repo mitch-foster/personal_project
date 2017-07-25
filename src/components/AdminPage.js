@@ -5,7 +5,6 @@ import loading from './loading.gif';
 
 class AdminPage extends Component {
     render() {
-        console.log(this.props.admin)
         if(this.props.loading === true){
             return (
                 <div>

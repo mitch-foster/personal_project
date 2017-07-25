@@ -35,7 +35,7 @@ class AdminBlog extends Component {
                 <AdminNavBar className='NavBar'/>
                 <h1>AdminBlogCreatePost PAGE</h1>
                 <div>
-                    <Quill/>
+                    <Quill author={this.props.author}/>
                 </div>
                 
             </div>

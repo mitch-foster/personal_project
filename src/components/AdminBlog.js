@@ -63,7 +63,9 @@ class AdminBlog extends Component {
                 <AdminNavBar className='NavBar'/>
                 <h1>AdminBlog PAGE</h1>
                 <div>
-                    <Button>New Post</Button>
+                    <Link to = '/adminblogcreatepost'>
+                        <Button>New Post</Button>
+                    </Link>
                 </div>
                 {displayAdminPosts}
             </div>
