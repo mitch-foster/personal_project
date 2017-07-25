@@ -71,5 +71,6 @@ app.get('/auth/logout', (req, res) => {
 app.get('/api/getblogposts', ctl.getBlogPosts)
 app.get('/api/getblogpost/:postid', ctl.getBlogPost)
 app.post('/api/createblogpost', ctl.createBlogPost)
+app.put('/api/editblogpost', ctl.editBlogPost)
 
 app.listen(port, console.log(`Listening on port ${port}.`))

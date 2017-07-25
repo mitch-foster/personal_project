@@ -7,10 +7,12 @@ class Quill extends Component {
     constructor(props) {
         super(props)
         this.state = {
+            postid: this.props.postid,
             title: this.props.title,
             date: this.props.date,
             text: this.props.text,
-            authorid: this.props.author 
+            authorid: this.props.author,
+
         }
         this.handleTitleChange = this.handleTitleChange.bind(this)
         this.handleDateChange = this.handleDateChange.bind(this)
@@ -45,7 +47,7 @@ class Quill extends Component {
 
     onPostSubmit(e){
         e.preventDefault()
-        axios.post('/api/createblogpost', this.state)
+        axios.put('/api/editblogpost', this.state)
     }
  
     render() {
