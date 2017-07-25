@@ -56,7 +56,7 @@ class Quill extends Component {
                 <form action="" onSubmit={this.onPostSubmit} >
                     <div>
                         <div>
-                            <h4>Post Title</h4>
+                            <h4>Edit Post Title</h4>
                             <input  className='input' 
                                     type="text" 
                                     value={this.state.title}
@@ -64,7 +64,7 @@ class Quill extends Component {
                             />
                         </div>
                         <div>
-                            <h4>Post Date (Jan 1, 20XX)</h4>
+                            <h4>Edit Post Date (<i>Jan 1, 20XX, should stay the same</i>)</h4>
                             <input  className='input' 
                                     type="text" 
                                     value={this.state.date}
@@ -72,7 +72,7 @@ class Quill extends Component {
                             />
                         </div>
                         <div>
-                            <h4>Post Text</h4>
+                            <h4>Edit Post Text</h4>
                             <ReactQuill value={this.state.text}
                                         onChange={this.handleQuillChange} 
                                         modules={this.modules}

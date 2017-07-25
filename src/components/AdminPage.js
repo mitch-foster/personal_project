@@ -26,6 +26,10 @@ class AdminPage extends Component {
             <div>
                 <AdminNavBar className='NavBar'/>
                 <h1>AdminPage PAGE</h1>
+                <div className='admin_page_div'>
+                    <div className='navagation_div'><h3>Blog Entries</h3></div>
+                    <div className='navagation_div'><h3>News Articles</h3></div>
+                </div>
             </div>
         );
     }

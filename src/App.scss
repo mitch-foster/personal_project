@@ -64,6 +64,11 @@ div {
   justify-content: center;
 }
 
+.admin_page_div {
+  display: flex;
+  justify-content: space-around;
+}
+
 .blog_div {
   display: flex;
   flex-direction: column;

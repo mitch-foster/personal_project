@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 import {Button} from 'react-bootstrap';
 
 import AdminNavBar from './AdminNavBar';
 import loading from './loading.gif';
 
 
-class BlogPost extends Component {
+class AdminBlogPost extends Component {
         constructor(props){
             super(props);
             this.state = {
-                postid: this.props.match.params.postid,
+                postid: null,
                 post: [],
                 postLoading: true,
             }
@@ -18,10 +19,16 @@ class BlogPost extends Component {
         }
         componentDidMount(){
             const URL = `/api/getblogpost/${this.props.match.params.postid}`;
-            axios.get(URL).then(response=>{this.setState({post: response.data, postLoading: false})})
+            axios.get(URL).then(response=>{
+                this.setState({
+                    postid: response.data[0].postid,
+                    post: response.data, 
+                    postLoading: false})
+            })
         }
         
     render() {
+        console.log("LOOK HERE", this.state.postid);
         if(this.state.postLoading === true){
             return (
                 <div>
@@ -35,7 +42,9 @@ class BlogPost extends Component {
                 <AdminNavBar className='NavBar'/>
                 <div className='blog_div'>
                     <div>
-                        <Button>Edit Post</Button>    
+                        <Link to={`/adminblogeditpost/${this.props.match.params.postid}`}>
+                            <Button>Edit Post</Button>   
+                        </Link> 
                         <Button>Delete Post</Button>    
                     </div>
                     <h1>{this.state.post[0].title}</h1>
@@ -47,4 +56,4 @@ class BlogPost extends Component {
     }
 }
 
-export default BlogPost;
+export default AdminBlogPost;
