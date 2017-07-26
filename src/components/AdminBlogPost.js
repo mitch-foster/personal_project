@@ -31,7 +31,7 @@ class AdminBlogPost extends Component {
                     postid: response.data[0].postid,
                     post: response.data, 
                     postLoading: false})
-                } this.setState({
+                } else this.setState({
                     postLoading: false,
                     redirect: true,
                 })

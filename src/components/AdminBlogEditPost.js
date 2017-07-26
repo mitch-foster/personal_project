@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Redirect} from 'react-router-dom';
 import axios from 'axios';
 
 import AdminNavBar from './AdminNavBar';
@@ -22,14 +22,24 @@ class AdminBlogEditPost extends Component {
         componentDidMount(){
             const URL = `/api/getblogpost/${this.props.match.params.postid}`;
             axios.get(URL).then(response=>{
-                this.setState({
-                    postid: response.data[0].postid,
-                    post: response.data, 
-                    postLoading: false
+                if(response.data[0]){
+                    this.setState({
+                        postid: response.data[0].postid,
+                        post: response.data, 
+                        postLoading: false
+                    })
+                } else this.setState({
+                    postLoading: false,
+                    redirect: true,
                 })
             })
         }
     render() {
+        if(this.state.redirect === true){
+            return (
+                <Redirect to='/adminblog'/>
+            )
+        }
          if(this.props.loading === true){
             return (
                 <div>
@@ -46,7 +56,7 @@ class AdminBlogEditPost extends Component {
                 </div>    
             )
         }
-        if(this.props.admin != true){
+        if(this.props.admin !== true){
             return(
                 <div>
                     <NavBar className='NavBar'/>
@@ -55,7 +65,6 @@ class AdminBlogEditPost extends Component {
             </div>
             )
         }
-        console.log("DATA", this.state.post);
         return (
             <div>
                 <AdminNavBar className='NavBar'/>

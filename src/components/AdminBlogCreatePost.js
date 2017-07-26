@@ -10,9 +10,6 @@ import loading from './loading.gif';
 
 
 class AdminBlogCreatePost extends Component {
-    constructor(props){
-        super(props)
-    }
     render() {
         console.log('HST', this.props.history)
          if(this.props.loading === true){

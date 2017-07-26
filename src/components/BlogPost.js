@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { Redirect } from 'react-router-dom';
 import NavBar from './NavBar';
 import loading from './loading.gif';
 
@@ -11,15 +12,31 @@ class BlogPost extends Component {
                 postid: this.props.match.params.postid,
                 post: [],
                 loading: true,
+                redirect: false
             }
 
         }
         componentDidMount(){
             const URL = `/api/getblogpost/${this.props.match.params.postid}`;
-            axios.get(URL).then(response=>{this.setState({post: response.data, loading: false})})
+            axios.get(URL).then(response=>{
+                if(response.data[0]){
+                    this.setState({
+                        post: response.data, 
+                        loading: false
+                    })
+                } else this.setState({
+                    loading: false,
+                    redirect: true,
+                })
+            })
         }
         
     render() {
+        if(this.state.redirect === true){
+            return (
+                <Redirect to='/blog'/>
+            )
+        }
         if(this.state.loading === true){
             return (
                 <div>
