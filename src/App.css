@@ -4,9 +4,11 @@ html {
 .NavBar {
   background-color: whitesmoke;
   height: 10vh;
+  width: 100vw;
   display: flex;
   justify-content: space-around;
-  align-items: center; }
+  align-items: center;
+  position: fixed; }
 
 .logo {
   width: 50px; }
@@ -39,14 +41,16 @@ div {
   color: white;
   border-color: #0075c1; }
 
-.home_navagation {
+.main_navagation {
   display: flex;
   justify-content: space-around;
-  height: 80vh; }
+  height: 80vh;
+  background-color: lightblue; }
 
 .navagation_div {
   height: 50vh;
   width: 33vw;
+  margin-top: 130px;
   background: gray;
   display: flex;
   align-items: center;

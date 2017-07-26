@@ -6,15 +6,17 @@ import logo from './PSAC_logo.jpg'
 class NavBar extends Component {
     render() {
         return (
-            <div className="NavBar">
-                 
-                <Link to='/'><img className='logo' src={logo} alt="PSAC Utah Logo"/></Link>
-                <Link to='/treatmentoptions'>TREATMENT OPTIONS</Link>
-                <Link to='/payments'>PAYMENTS</Link>
-                <Link to='/faq'>FAQ</Link>
-                {/* <Link to='/news'>NEWS</Link> */}
-                <Link to='/blog'>BLOG</Link>
-                <Link to='/contactus'>COUNTACT US</Link>
+            <div>
+                <div className="NavBar">
+                    <Link to='/'><img className='logo' src={logo} alt="PSAC Utah Logo"/></Link>
+                    <Link to='/treatmentoptions'>TREATMENT OPTIONS</Link>
+                    <Link to='/faq'>FAQ</Link>
+                    <Link to='/blog'>BLOG</Link>
+                    <Link to='/contactus'>COUNTACT US</Link>
+                    {/* <Link to='/payments'>PAYMENTS</Link> */}
+                    {/* <Link to='/news'>NEWS</Link> */}
+                </div>
+                <div style={{height: '10vh'}}></div> 
             </div>
         );
     }

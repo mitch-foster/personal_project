@@ -56,14 +56,7 @@ componentDidMount(){
           <Route path="/admin" render={ () => <AdminPage admin={this.state.admin} loading={this.state.loading}/>}/>
           <Route exact path="/adminblog/:postid" render={ (props) => <AdminBlogPost {...props} admin={this.state.admin} loading={this.state.loading}/>} />
           <Route exact path="/adminblogcreatepost" render={ () => <AdminBlogCreatePost admin={this.state.admin} loading={this.state.loading} author={this.state.author}/>} />
-          <Route exact path="/adminblogeditpost/:postid" render={ () => <AdminBlogEditPost 
-                                                                             admin={this.state.admin} 
-                                                                            loading={this.state.loading} 
-                                                                            author={this.state.author} 
-                                                                  
-                                                                            />
-                                                                  } 
-          />
+          <Route exact path="/adminblogeditpost/:postid" render={ () => <AdminBlogEditPost admin={this.state.admin} loading={this.state.loading} author={this.state.author}/>} />
           <Route path="/adminblog" render={ () => <AdminBlog admin={this.state.admin} loading={this.state.loading}/>} />
           <Route path="/adminnews" render={ () => <AdminNews admin={this.state.admin} loading={this.state.loading}/>} />
         </Switch>

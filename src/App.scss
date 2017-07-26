@@ -7,9 +7,11 @@ html {
 .NavBar {
   background-color: whitesmoke;
   height: 10vh;
+  width: 100vw;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  position: fixed
 }
 
 .logo {
@@ -50,15 +52,17 @@ div {
 
 }
 
-.home_navagation {
+.main_navagation {
   display: flex;
   justify-content: space-around;
   height: 80vh;
+  background-color: lightblue
 }
 
 .navagation_div {
   height: 50vh;
   width: 33vw;
+  margin-top: 130px;
   background: gray;
   display: flex;
   align-items: center;

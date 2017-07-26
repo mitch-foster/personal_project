@@ -7,6 +7,7 @@ class ContactUs extends Component {
             <div>
                 <NavBar className='NavBar'/>
                 <h1>CONTACT US PAGE</h1>
+                <p>Email PSAC at <a href="mailto:carol@psacutah.com">Carol@PSACUTAH.com</a></p>
             </div>
         );
     }

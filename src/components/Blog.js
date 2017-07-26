@@ -41,9 +41,8 @@ class Blog extends Component {
         return (
             <div>
                 <NavBar className='NavBar'/>
-                <h1>BLOG PAGE</h1>
+                <h1>BLOG</h1>
                 {displayPosts}
-
             </div>
         );
     }

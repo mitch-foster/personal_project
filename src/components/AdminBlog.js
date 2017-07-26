@@ -53,7 +53,7 @@ class AdminBlog extends Component {
                     <NavBar className='NavBar'/>
                     <h1>AdminBlog PAGE</h1>
                     <h2>NOT ADMIN</h2>
-            </div>
+                </div>
             )
         }
         if(this.state.loading === true){
