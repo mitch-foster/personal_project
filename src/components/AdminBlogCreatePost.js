@@ -11,7 +11,6 @@ import loading from './loading.gif';
 
 class AdminBlogCreatePost extends Component {
     render() {
-        console.log('HST', this.props.history)
          if(this.props.loading === true){
             return (
                 <div>

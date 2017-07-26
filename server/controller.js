@@ -30,7 +30,6 @@ module.exports = {
 
     deleteBlogPost: (req, res, next) => {
         const dbInstance = req.app.get('db');
-        console.log(req.body.postid)
         dbInstance.deletePost([req.body.postid])
             .then(() => res.status(200).send('SUCCESS!'))
             .catch( err => res.status(500).send(err))

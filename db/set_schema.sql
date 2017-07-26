@@ -27,7 +27,7 @@ CREATE TABLE blog (
 );
 
 INSERT into blog (image, title, date, authorid, text)
-VALUES (null, 'Title of the Blog Post', 'jul 19, 2017', 1, 'This is an example of a blog post for the website pscautah.com. This is an example of a blog post for the website pscautah.com. This is an example of a blog post for the website pscautah.com. This is an example of a blog post for the website pscautah.com. This is an example of a blog post for the website pscautah.com.');
+VALUES (null, 'Title of the Blog Post', 'jul 19, 2017', 1, '<h1>Heading for blog post:</h1><p><br></p><p>This is an example of a blog post for the website pscautah.com. This is an example of a blog post for the website pscautah.com. This is an example of a blog post for the website pscautah.com. This is an example of a blog post for the website pscautah.com. This is an example of a blog post for the website pscautah.com.</p>');
 
 INSERT into blog (image, title, date, authorid, text)
 VALUES (null, 'Second blog post', 'aug 15, 2017', 1, 'Content for post 2');

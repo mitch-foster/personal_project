@@ -47,7 +47,6 @@ massive( connectionString ).then(dbInstance => {
 });
 
 passport.serializeUser((user, done) => {
-    console.log('serialize', user);
   done(null, user);
 });
 
