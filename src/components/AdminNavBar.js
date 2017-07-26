@@ -10,7 +10,7 @@ class AdminNavBar extends Component {
                  
                 <Link to='/admin'><img className='logo' src={logo} alt="PSAC Utah Logo"/></Link>
                 <Link to='/adminblog'>BLOG ENTRIES</Link>
-                <Link to='/adminnews'>NEWS ARTICLES</Link>
+                {/* <Link to='/adminnews'>NEWS ARTICLES</Link> */}
                 <a href='http://localhost:3333/auth/logout'>LOGOUT</a>
             </div>
         );

@@ -41,7 +41,6 @@ massive( connectionString ).then(dbInstance => {
                 dbInstance.getUser(profile._json.clientID).then((user)=>{
                     done(null, user)
                 })
-                // done(null, profile)
             }
         ))
 
@@ -72,5 +71,6 @@ app.get('/api/getblogposts', ctl.getBlogPosts)
 app.get('/api/getblogpost/:postid', ctl.getBlogPost)
 app.post('/api/createblogpost', ctl.createBlogPost)
 app.put('/api/editblogpost', ctl.editBlogPost)
+app.delete('/api/deleteblogpost', ctl.deleteBlogPost)
 
 app.listen(port, console.log(`Listening on port ${port}.`))

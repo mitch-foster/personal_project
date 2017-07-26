@@ -12,7 +12,7 @@ class NavBar extends Component {
                 <Link to='/treatmentoptions'>TREATMENT OPTIONS</Link>
                 <Link to='/payments'>PAYMENTS</Link>
                 <Link to='/faq'>FAQ</Link>
-                <Link to='/news'>NEWS</Link>
+                {/* <Link to='/news'>NEWS</Link> */}
                 <Link to='/blog'>BLOG</Link>
                 <Link to='/contactus'>COUNTACT US</Link>
             </div>

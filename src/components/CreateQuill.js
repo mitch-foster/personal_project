@@ -45,7 +45,7 @@ class Quill extends Component {
 
     onPostSubmit(e){
         e.preventDefault()
-        axios.post('/api/createblogpost', this.state)
+        axios.post('/api/createblogpost', this.state).then( response => this.props.history.push('/adminblog'))
     }
  
     render() {

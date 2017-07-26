@@ -16,7 +16,6 @@ module.exports = {
 
     createBlogPost: (req, res, next) => {
         const dbInstance = req.app.get('db');
-        console.log('req.body:', req.body)
         dbInstance.createPost([req.body.title, req.body.date, req.body.authorid, req.body.text])
             .then(() => res.status(200).send('SUCCESS!'))
             .catch( err => res.status(500).send(err))
@@ -24,8 +23,15 @@ module.exports = {
 
     editBlogPost: (req, res, next) => {
         const dbInstance = req.app.get('db');
-        console.log('req.body:', req.body)
         dbInstance.editPost([req.body.postid, req.body.title, req.body.date, req.body.text])
+            .then(() => res.status(200).send('SUCCESS!'))
+            .catch( err => res.status(500).send(err))
+    },
+
+    deleteBlogPost: (req, res, next) => {
+        const dbInstance = req.app.get('db');
+        console.log(req.body.postid)
+        dbInstance.deletePost([req.body.postid])
             .then(() => res.status(200).send('SUCCESS!'))
             .catch( err => res.status(500).send(err))
     }

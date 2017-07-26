@@ -45,9 +45,15 @@ class Quill extends Component {
         this.setState({ text: value })
     }
 
+    editPost(){
+        axios.put('/api/editblogpost', this.state).then( response => {this.props.history.push('/adminblog')} )
+        
+    }
+
     onPostSubmit(e){
-        e.preventDefault()
-        axios.put('/api/editblogpost', this.state)
+        e.preventDefault();
+        axios.put('/api/editblogpost', this.state).then( response => {this.props.history.push('/adminblog')} )
+
     }
  
     render() {

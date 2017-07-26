@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 
 import AdminNavBar from './AdminNavBar';
 import NavBar from './NavBar';
@@ -8,8 +9,12 @@ import loading from './loading.gif';
 
 
 
-class AdminBlog extends Component {
+class AdminBlogCreatePost extends Component {
+    constructor(props){
+        super(props)
+    }
     render() {
+        console.log('HST', this.props.history)
          if(this.props.loading === true){
             return (
                 <div>
@@ -32,7 +37,9 @@ class AdminBlog extends Component {
                 <AdminNavBar className='NavBar'/>
                 <h1>AdminBlogCreatePost PAGE</h1>
                 <div>
-                    <CreateQuill author={this.props.author}/>
+                    <CreateQuill    author={this.props.author}
+                                    history={this.props.history}
+                    />
                 </div>
                 
             </div>
@@ -40,4 +47,4 @@ class AdminBlog extends Component {
     }
 }
 
-export default AdminBlog;
+export default withRouter(AdminBlogCreatePost);

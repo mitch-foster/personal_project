@@ -27,7 +27,8 @@ div {
   padding-bottom: 150px; }
 
 .mountain_div h1 {
-  font-size: 60px; }
+  font-size: 60px;
+  text-align: center; }
 
 .mountain_div h2 {
   font-size: 2em; }

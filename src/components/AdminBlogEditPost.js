@@ -15,6 +15,7 @@ class AdminBlogEditPost extends Component {
                 postid: null,
                 post: [],
                 postLoading: true,
+                redirect: false
             }
 
         }
@@ -60,7 +61,8 @@ class AdminBlogEditPost extends Component {
                 <AdminNavBar className='NavBar'/>
                 <h1>AdminBlogEditPost PAGE</h1>
                 <div>
-                     <EditQuill  author={this.props.author}
+                     <EditQuill history={this.props.history}
+                                author={this.props.author}
                                 postid={this.state.postid}
                                 title={this.state.post[0].title}
                                 date={this.state.post[0].date}
