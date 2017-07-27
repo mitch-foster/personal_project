@@ -28,7 +28,10 @@ app.use(passport.session());
 massive( connectionString ).then(dbInstance => {
         app.set('db', dbInstance);
 
-        dbInstance.set_schema()
+        // dbInstance.set_schema()
+        //     .then( () => console.log('Tables have been reset'))
+        //     .catch( err => console.log(err));
+        dbInstance.host_set_schema()
             .then( () => console.log('Tables have been reset'))
             .catch( err => console.log(err));
 
