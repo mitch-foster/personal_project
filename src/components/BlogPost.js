@@ -50,8 +50,9 @@ class BlogPost extends Component {
                 <NavBar className='NavBar'/>
                 <div className='blog_div'>    
                     <h1>{this.state.post[0].title}</h1>
+                    <h2>{this.state.post[0].teaser}</h2>
                     <h4>{this.state.post[0].date}</h4>
-                    {this.state.post[0].text}
+                    <div dangerouslySetInnerHTML={{__html: this.state.post[0].text}}></div>
                 </div>
             </div>
         );
