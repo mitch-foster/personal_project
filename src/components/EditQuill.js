@@ -10,12 +10,14 @@ class Quill extends Component {
             postid: this.props.postid,
             title: this.props.title,
             date: this.props.date,
+            teaser: this.props.teaser,
             text: this.props.text,
             authorid: this.props.author,
 
         }
         this.handleTitleChange = this.handleTitleChange.bind(this)
         this.handleDateChange = this.handleDateChange.bind(this)
+        this.handleTeaserChange = this.handleTeaserChange.bind(this)
         this.handleQuillChange = this.handleQuillChange.bind(this)
         this.onPostSubmit = this.onPostSubmit.bind(this)
     }
@@ -40,6 +42,9 @@ class Quill extends Component {
     }
     handleDateChange(e) {
         this.setState({ date: e.target.value })
+    }
+    handleTeaserChange(e) {
+        this.setState({ teaser: e.target.value })
     }
     handleQuillChange(value) {
         this.setState({ text: value })
@@ -70,11 +75,19 @@ class Quill extends Component {
                             />
                         </div>
                         <div>
-                            <h4>Edit Post Date (<i>Jan 1, 20XX, should stay the same</i>)</h4>
+                            <h4>Edit Post Date (<i>Jan 1st, 20XX, should stay the same</i>)</h4>
                             <input  className='input' 
                                     type="text" 
                                     value={this.state.date}
                                     onChange={this.handleDateChange}
+                            />
+                        </div>
+                        <div>
+                            <h4>Edit Post Teaser</h4>
+                            <input  className='input' 
+                                    type="text" 
+                                    value={this.state.teaser}
+                                    onChange={this.handleTeaserChange}
                             />
                         </div>
                         <div>

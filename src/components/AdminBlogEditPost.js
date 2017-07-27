@@ -75,6 +75,7 @@ class AdminBlogEditPost extends Component {
                                 postid={this.state.postid}
                                 title={this.state.post[0].title}
                                 date={this.state.post[0].date}
+                                teaser={this.state.post[0].teaser}
                                 text={this.state.post[0].text}
                     
                     /> 

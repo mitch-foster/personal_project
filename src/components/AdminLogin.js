@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Button} from 'react-bootstrap';
+import {Link} from 'react-router-dom';
 import AdminNavBar from './AdminNavBar';
 
 class AdminLogin extends Component {
@@ -12,9 +13,9 @@ class AdminLogin extends Component {
                 <a href='http://localhost:3333/auth'>
                     <Button>Login</Button>
                 </a>
-                <a href='http://localhost:3000'>
+                <Link to='/'>
                     <Button>Go to PSAC's Website</Button>
-                </a>
+                </Link>
             </div>
         );
     }

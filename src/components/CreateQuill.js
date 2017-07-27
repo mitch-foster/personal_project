@@ -8,11 +8,13 @@ class Quill extends Component {
         super(props)
         this.state = {
             title: '',
+            teaser: '',
             date: '',
             text: '',
             authorid: this.props.author 
         }
         this.handleTitleChange = this.handleTitleChange.bind(this)
+        this.handleTeaserChange = this.handleTeaserChange.bind(this)
         this.handleDateChange = this.handleDateChange.bind(this)
         this.handleQuillChange = this.handleQuillChange.bind(this)
         this.onPostSubmit = this.onPostSubmit.bind(this)
@@ -20,7 +22,7 @@ class Quill extends Component {
 
     modules = {
         toolbar: [
-        [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+        [{ 'header': [2, 3, 4, 5, 6, false] }],
         ['bold', 'italic', 'underline'],
         [{'list': 'ordered'}, {'list': 'bullet'}, {'indent': '-1'}, {'indent': '+1'}],
         ],
@@ -35,6 +37,9 @@ class Quill extends Component {
     
     handleTitleChange(e) {
         this.setState({ title: e.target.value })
+    }
+    handleTeaserChange(e) {
+        this.setState({ teaser: e.target.value })
     }
     handleDateChange(e) {
         this.setState({ date: e.target.value })
@@ -59,6 +64,14 @@ class Quill extends Component {
                                     type="text" 
                                     value={this.state.title}
                                     onChange={this.handleTitleChange} 
+                            />
+                        </div>
+                        <div>
+                            <h4>Post Teaser</h4>
+                            <input  className='input' 
+                                    type="text" 
+                                    value={this.state.teaser}
+                                    onChange={this.handleTeaserChange} 
                             />
                         </div>
                         <div>

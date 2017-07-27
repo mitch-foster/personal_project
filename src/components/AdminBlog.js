@@ -34,7 +34,7 @@ class AdminBlog extends Component {
                 <div key={i} className='blog_div'>    
                     <h1><Link to ={`/adminblog/${posts.postid}`} className='title_atag'>{posts.title}</Link></h1>
                     <h4>{posts.date}</h4>
-                    <h4>{posts.text.slice(0,300)}. . . <Link to ={`/adminblog/${posts.postid}`}>Read more</Link></h4>
+                    <h4>{posts.teaser} <Link to ={`/adminblog/${posts.postid}`}>Read more --></Link></h4>
                 </div>
             );
         })
