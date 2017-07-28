@@ -2,13 +2,16 @@ html {
   font-family: "Fjalla One"; }
 
 .NavBar {
-  background-color: whitesmoke;
+  background-color: #fffdfd;
   height: 10vh;
   width: 100vw;
   display: flex;
   justify-content: space-around;
   align-items: center;
   position: fixed; }
+
+.NavBar a {
+  font-size: large; }
 
 .logo {
   width: 50px; }
@@ -45,13 +48,13 @@ div {
   display: flex;
   justify-content: space-around;
   height: 80vh;
-  background-color: lightblue; }
+  background-color: whitesmoke; }
 
 .navagation_div {
   height: 50vh;
   width: 33vw;
   margin-top: 130px;
-  background: gray;
+  background: #fffdfd;
   display: flex;
   align-items: center;
   justify-content: center; }

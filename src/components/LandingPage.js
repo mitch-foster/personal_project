@@ -11,11 +11,11 @@ class LandingPage extends Component {
                 <div className='mountain_div'>
                     <h1>PERSONAL SLEEP APNEA CARE</h1>
                     <h2>YOUR Sleep Apnea Specialist</h2>
-                    <h2>Mission Statement</h2>
                     <Link to='/contactus'>
-                        <Button className='contact'>CONTACT PSAC TO SCHEDULE YOUR CONSULTATION</Button>
+                        <Button className='contact'>SCHEDULE YOUR CONSULTATION</Button>
                     </Link>
                 </div>
+                    <h2>Veniam tempor enim sint labore dolor dolore enim reprehenderit quis fugiat nostrud aliqua. Ipsum ea deserunt consectetur occaecat. Deserunt officia aute non qui magna et.</h2>
                 <div className='main_navagation'>
                     <div className='navagation_div'>FAQ</div>
                     <div className='navagation_div'>Treatment Options</div>

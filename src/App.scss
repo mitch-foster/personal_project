@@ -1,18 +1,23 @@
 $psac_blue: #0075c1;
 $psac_font: 'Fjalla One';
+$navbar_gray: #fffdfd;
 
 html {
   font-family: $psac_font;
 }
 
 .NavBar {
-  background-color: whitesmoke;
+  background-color: $navbar_gray;
   height: 10vh;
   width: 100vw;
   display: flex;
   justify-content: space-around;
   align-items: center;
   position: fixed
+}
+
+.NavBar a {
+  font-size: large;
 }
 
 .logo {
@@ -57,14 +62,14 @@ div {
   display: flex;
   justify-content: space-around;
   height: 80vh;
-  background-color: lightblue
+  background-color: whitesmoke
 }
 
 .navagation_div {
   height: 50vh;
   width: 33vw;
   margin-top: 130px;
-  background: gray;
+  background: $navbar_gray;
   display: flex;
   align-items: center;
   justify-content: center;

@@ -3,6 +3,7 @@ import axios from 'axios';
 import {Link} from 'react-router-dom';
 import NavBar from './NavBar';
 import loading from './loading.gif'
+import mountains from './mountains.jpg'
 
 
 class Blog extends Component {
@@ -41,8 +42,9 @@ class Blog extends Component {
         return (
             <div>
                 <NavBar className='NavBar'/>
-                <h1>BLOG</h1>
-                {displayPosts}
+                <div style={{height: '250px', background: 'gray'}}></div>   
+                    <h1>BLOG</h1>
+                    {displayPosts}
             </div>
         );
     }

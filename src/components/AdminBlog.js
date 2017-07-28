@@ -67,6 +67,7 @@ class AdminBlog extends Component {
         return (
             <div>
                 <AdminNavBar className='NavBar'/>
+                <div style={{height: '250px', background: 'gray'}}></div>   
                 <h1>AdminBlog PAGE</h1>
                 <div>
                     <Link to = '/adminblogcreatepost'>
