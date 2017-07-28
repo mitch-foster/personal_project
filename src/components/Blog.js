@@ -3,7 +3,7 @@ import axios from 'axios';
 import {Link} from 'react-router-dom';
 import NavBar from './NavBar';
 import loading from './loading.gif'
-import mountains from './mountains.jpg'
+// import mountains from './mountains.jpg'
 
 
 class Blog extends Component {

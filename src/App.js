@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
-import axios from 'axios';
+// import axios from 'axios';
 
 import LandingPage from './components/LandingPage';
 import News from './components/News';

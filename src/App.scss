@@ -18,10 +18,22 @@ html {
 
 .NavBar a {
   font-size: large;
+  font-weight: 700;
 }
 
-.logo {
+.navbar_logo {
   width: 50px;
+}
+
+.navbar_hamburger_icon {
+  display: none;
+}
+
+.navbar_hamburger {
+  background-color: $navbar_color;
+  height: 10vh;
+  justify-content: space-around;
+  align-items: center;
 }
 
 div {
@@ -127,18 +139,89 @@ div {
     border-color: #ccc;
 }
 
+@media(max-width: 1200px) {
+  .NavBar a {
+    font-size: larger;
+    font-weight: 500;
+  }
+}
+
+@media(max-width: 900px) {
+  .navbar_link {
+    display: none;
+  }
+  .navbar_hamburger_icon {
+    display: block;
+    position: absolute;
+    right: 25px;
+    top: 35px;
+  }
+  
+  .navbar_hamburger {
+    position: fixed;
+    background-color: $navbar_color;
+    width: 100vw;
+    height: 10vh;
+  }
+
+  .navbar_hamburger a{
+    font-size: smaller;
+  }
+  
+  .navbar_logo {
+    position: absolute;
+    left: 25px;
+    top: 25px;
+  }
+}
+
+
 @media(max-width: 950px) {
   .mountain_div h1 {
     font-size: 50px;
   }
-  
+
   .main_navagation {
     flex-direction: column;
     align-items: center;
+    height: 100vh
   }
     
   .navagation_div {
-    height: 33vh;
+    height: 300px;
     width: 65vw;
+    margin-bottom: 5px
+  }
+}
+
+@media(max-width: 500px) {
+  .mountain_div h1 {
+    font-size: 35px;
+  }
+  .mountain_div h2 {
+    font-size: 18px;
+  }
+  .contact {
+    font-size: 10px
+  }
+  .landing_div h2 {
+    font-size: 18px
+  }
+  .welcome_text {
+    width: 60vw;
+    margin-left: 20vw;
+  }
+}
+ 
+@media(max-width: 1000px){
+  .welcome_text h3 {
+    font-size: 15px;
+  }
+}
+
+
+@media(min-width: 900px){
+   .navbar_hamburger {
+    display: none !important;
   }
 }
