@@ -26,18 +26,21 @@ class App extends Component {
     super();
 
     this.state = {
-      admin: false,
-      author: null,
-      loading: true,
+      // admin: false,
+      // author: null,
+      // loading: true,
+      admin: true,
+      author: 1,
+      loading: false,
     }
   }
 
 componentDidMount(){
-  axios.get('/auth/me')
-    .then( response => {
-      response.data[0].admin === true ? this.setState({admin: true, author: response.data[0].id, loading: false}) : this.setState({admin: false, author: response.data[0].id, loading: false})
-    }
-  )
+  // axios.get('/auth/me')
+  //   .then( response => {
+  //     response.data[0].admin === true ? this.setState({admin: true, author: response.data[0].id, loading: false}) : this.setState({admin: false, author: response.data[0].id, loading: false})
+  //   }
+  // )
 }
 
   render() {
