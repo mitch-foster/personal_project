@@ -20,6 +20,9 @@ div {
   color: black;
   font-family: "Fjalla One"; }
 
+#landing_page {
+  background-color: whitesmoke; }
+
 .mountain_div {
   height: 70vh;
   display: flex;
@@ -29,7 +32,10 @@ div {
   background: url(./components/mountains.jpg) no-repeat;
   background-size: cover;
   color: white;
-  padding-bottom: 150px; }
+  margin-bottom: 40px; }
+
+.landing_div {
+  background-color: whitesmoke; }
 
 .mountain_div h1 {
   font-size: 60px;
@@ -47,13 +53,12 @@ div {
 .main_navagation {
   display: flex;
   justify-content: space-around;
-  height: 80vh;
+  height: 55vh;
   background-color: whitesmoke; }
 
 .navagation_div {
   height: 50vh;
   width: 33vw;
-  margin-top: 130px;
   background: #fffdfd;
   display: flex;
   align-items: center;
@@ -99,3 +104,13 @@ div {
   border: 1px solid transparent;
   border-radius: 4px;
   border-color: #ccc; }
+
+@media (max-width: 950px) {
+  .mountain_div h1 {
+    font-size: 50px; }
+  .main_navagation {
+    flex-direction: column;
+    align-items: center; }
+  .navagation_div {
+    height: 33vh;
+    width: 65vw; } }

@@ -1,13 +1,13 @@
 $psac_blue: #0075c1;
 $psac_font: 'Fjalla One';
-$navbar_gray: #fffdfd;
+$navbar_color: #fffdfd;
 
 html {
   font-family: $psac_font;
 }
 
 .NavBar {
-  background-color: $navbar_gray;
+  background-color: $navbar_color;
   height: 10vh;
   width: 100vw;
   display: flex;
@@ -29,6 +29,10 @@ div {
   font-family: $psac_font;
 }
 
+#landing_page {
+  background-color: whitesmoke;
+}
+
 .mountain_div {
   height: 70vh;
   display: flex;
@@ -38,9 +42,12 @@ div {
   background: url(./components/mountains.jpg) no-repeat;
   background-size: cover;
   color: white;
-  padding-bottom: 150px;
+  margin-bottom: 40px;
 }
 
+.landing_div {
+  background-color: whitesmoke;
+}
 .mountain_div h1 {
   font-size: 60px;
   text-align: center;
@@ -61,15 +68,14 @@ div {
 .main_navagation {
   display: flex;
   justify-content: space-around;
-  height: 80vh;
+  height: 55vh;
   background-color: whitesmoke
 }
 
 .navagation_div {
   height: 50vh;
   width: 33vw;
-  margin-top: 130px;
-  background: $navbar_gray;
+  background: $navbar_color;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -119,4 +125,20 @@ div {
     border: 1px solid transparent;
     border-radius: 4px;
     border-color: #ccc;
+}
+
+@media(max-width: 950px) {
+  .mountain_div h1 {
+    font-size: 50px;
+  }
+  
+  .main_navagation {
+    flex-direction: column;
+    align-items: center;
+  }
+    
+  .navagation_div {
+    height: 33vh;
+    width: 65vw;
+  }
 }
