@@ -33,7 +33,7 @@ div {
 #landing_page {
   background-color: whitesmoke; }
 
-.mountain_div {
+.mountain_div_landing_page {
   height: 70vh;
   display: flex;
   flex-direction: column;
@@ -44,15 +44,34 @@ div {
   color: white;
   margin-bottom: 40px; }
 
+.mountain_div {
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url(./components/mountains.jpg) no-repeat;
+  background-position-y: -250px;
+  background-size: cover;
+  color: white;
+  margin-bottom: 40px; }
+
 .landing_div {
   background-color: whitesmoke; }
 
-.mountain_div h1 {
+.mountain_div_landing_page h1 {
   font-size: 60px;
   text-align: center; }
 
-.mountain_div h2 {
+.mountain_div_landing_page h2 {
   font-size: 2em; }
+
+.mountain_div h1 {
+  font-size: 50px;
+  text-align: center; }
+
+.mountain_div h2 {
+  font-size: 30px; }
 
 .contact {
   background: #0075c1;
@@ -138,10 +157,14 @@ div {
   .navbar_logo {
     position: absolute;
     left: 25px;
-    top: 25px; } }
+    top: 25px; }
+  .mountain_div {
+    background-position-y: 0px; } }
 
 @media (max-width: 950px) {
   .mountain_div h1 {
+    font-size: 50px; }
+  .mountain_div_landing_page h1 {
     font-size: 50px; }
   .main_navagation {
     flex-direction: column;
@@ -152,10 +175,14 @@ div {
     width: 65vw;
     margin-bottom: 5px; } }
 
-@media (max-width: 500px) {
+@media (max-width: 550px) {
   .mountain_div h1 {
     font-size: 35px; }
   .mountain_div h2 {
+    font-size: 18px; }
+  .mountain_div_landing_page h1 {
+    font-size: 35px; }
+  .mountain_div_landing_page h2 {
     font-size: 18px; }
   .contact {
     font-size: 10px; }

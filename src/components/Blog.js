@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import {Link} from 'react-router-dom';
+import {Button} from 'react-bootstrap'
+
 import NavBar from './NavBar';
 import loading from './loading.gif'
-// import mountains from './mountains.jpg'
+import mountains from './mountains.jpg'
 
 
 class Blog extends Component {
@@ -42,7 +44,13 @@ class Blog extends Component {
         return (
             <div>
                 <NavBar className='NavBar'/>
-                <div style={{height: '250px', background: 'gray'}}></div>   
+                <div className='mountain_div'>
+                     <h1>PERSONAL SLEEP APNEA CARE</h1>
+                    <h2>YOUR Sleep Apnea Specialist</h2>
+                    <Link to='/contactus'>
+                        <Button className='contact'>SCHEDULE YOUR CONSULTATION</Button>
+                    </Link>                 
+                </div>   
                     <h1>BLOG</h1>
                     {displayPosts}
             </div>

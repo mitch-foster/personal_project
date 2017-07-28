@@ -9,7 +9,7 @@ class AdminNavBar extends Component {
         return (
             <div>
                 <div className="NavBar">
-                    <Link to='/admin'><img className='logo' src={logo} alt="PSAC Utah Logo"/></Link>
+                    <Link to='/admin'><img className='navbar_logo' src={logo} alt="PSAC Utah Logo"/></Link>
                     <Link to='/adminblog'>BLOG ENTRIES</Link>
                     {/* <Link to='/adminnews'>NEWS ARTICLES</Link> */}
                     <a href={config.logoutURL}>LOGOUT</a>

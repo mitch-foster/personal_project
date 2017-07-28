@@ -8,7 +8,7 @@ class LandingPage extends Component {
         return (
             <div id='landing_page'>
                 <NavBar/>
-                <div className='mountain_div'>
+                <div className='mountain_div_landing_page'>
                     <h1>PERSONAL SLEEP APNEA CARE</h1>
                     <h2>YOUR Sleep Apnea Specialist</h2>
                     <Link to='/contactus'>
