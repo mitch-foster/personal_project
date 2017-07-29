@@ -26,7 +26,7 @@ class Blog extends Component {
           const displayPosts = this.state.posts.map( (posts, i) => {
             return (
                 <div key={i} className='blog_div'>    
-                    <h1><Link to ={`/blog/${posts.postid}`} className='title_atag'>{posts.title}</Link></h1>
+                    <h1 style ={{}}><Link to ={`/blog/${posts.postid}`} className='title_atag'>{posts.title}</Link></h1>
                     <h4>{posts.date}</h4>
                     <h4>{posts.teaser} <Link to ={`/blog/${posts.postid}`}>Read more --></Link></h4> 
                 </div>
@@ -37,22 +37,35 @@ class Blog extends Component {
             return (
                 <div>
                     <NavBar className='NavBar'/>
-                     <img src={loading} alt='Loading'/>
+                    <div className='mountain_div'>
+                        <h1>PERSONAL SLEEP APNEA CARE</h1>
+                        <h2>YOUR Sleep Apnea Specialist</h2>
+                        <Link to='/contactus'>
+                            <Button className='contact'>SCHEDULE YOUR CONSULTATION</Button>
+                        </Link>                 
+                    </div> 
+                    <div style={{display: 'flex', justifyContent: 'center'}}>
+                        <img src={loading} alt='Loading'/>
+                    </div>    
                 </div>    
             )
         }
         return (
             <div>
                 <NavBar className='NavBar'/>
-                <div className='mountain_div'>
-                     <h1>PERSONAL SLEEP APNEA CARE</h1>
+                <div style ={{marginBottom: '5px'}}className='mountain_div'>
+                    <h1>PERSONAL SLEEP APNEA CARE</h1>
                     <h2>YOUR Sleep Apnea Specialist</h2>
                     <Link to='/contactus'>
                         <Button className='contact'>SCHEDULE YOUR CONSULTATION</Button>
                     </Link>                 
-                </div>   
+                </div>
+                <div style={{display: 'flex', justifyContent: 'center'}} >   
                     <h1>BLOG</h1>
+                </div>
+                <div className='posts'>
                     {displayPosts}
+                </div>    
             </div>
         );
     }

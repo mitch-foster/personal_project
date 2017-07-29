@@ -41,9 +41,18 @@ class BlogPost extends Component {
         }
         if(this.state.loading === true){
             return (
-                <div>
+              <div>
                     <NavBar className='NavBar'/>
-                    <img src={loading} alt='Loading'/>
+                    <div className='mountain_div'>
+                        <h1>PERSONAL SLEEP APNEA CARE</h1>
+                        <h2>YOUR Sleep Apnea Specialist</h2>
+                        <Link to='/contactus'>
+                            <Button className='contact'>SCHEDULE YOUR CONSULTATION</Button>
+                        </Link>                 
+                    </div> 
+                    <div style={{display: 'flex', justifyContent: 'center'}}>
+                        <img src={loading} alt='Loading'/>
+                    </div>    
                 </div>    
             )
         }
