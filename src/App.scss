@@ -56,6 +56,8 @@ div {
   background-size: cover;
   color: white;
   margin-bottom: 40px;
+  width: 95vw;
+  margin-left: 2.5vw;
 }
 
 .mountain_div {
@@ -70,6 +72,8 @@ div {
   color: white;
   margin-bottom: 40px;
   padding-bottom: 15px;
+  width: 95vw;
+  margin-left: 2.5vw;
 }
 
 .landing_div {
@@ -157,6 +161,10 @@ div {
 .blog_div {
   display: flex;
   flex-direction: column;
+}
+
+.blog_div p {
+  font-size: larger;
 }
 
 .posts {

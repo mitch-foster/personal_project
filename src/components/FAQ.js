@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
+import {Button} from 'react-bootstrap'
+
 import NavBar from './NavBar';
 
 class FAQ extends Component {
@@ -6,7 +9,41 @@ class FAQ extends Component {
         return (
             <div>
                 <NavBar className='NavBar'/>
-                <h1>FAQ PAGE</h1>
+                <div style ={{marginBottom: '5px'}}className='mountain_div'>
+                    <h1>PERSONAL SLEEP APNEA CARE</h1>
+                    <h2>YOUR Sleep Apnea Specialist</h2>
+                    <Link to='/contactus'>
+                        <Button className='contact'>SCHEDULE YOUR CONSULTATION</Button>
+                    </Link>                 
+                </div>
+                <div className='treatment_options'>   
+                    <h1 style={{textAlign: 'center', marginBottom: '3vh'}}>Frequently Asked Questions About Sleep Apnea</h1>
+                    <div style={{width: '60vw'}}>
+                        <h2>How do I know if I have sleep apnea?</h2>
+                            <h3 style={{paddingLeft: '2.5vw'}}>Snoring and waking frequently to use the bathroom are 
+                                signs that you have sleep apnea.  Often partners know more about symptoms than you do.  
+                                Sleep Apnea is connected to many cormobidities such as High Blood Pressure, Diabetes, Hypertension, 
+                                Stroke, Obesity, Gastroenteritis. 
+                            </h3>
+                        <h2>How do I get tested for sleep apnea?</h2>
+                            <h3 style={{paddingLeft: '2.5vw'}}>PSAC will supply you with a 2 night home sleep test done in the comfort of your own home.</h3>  
+                        <h2>Does Insurance cover Sleep Apnea?</h2> 
+                        <h3 style={{paddingLeft: '2.5vw'}}>Although every insurance is different, most insurance companies have a sleep apnea allowable.
+                            PSAC will help you understand all of the options available to you. 
+                            Payment programs are also available. 
+                        </h3> 
+                        <h2>How do you treat sleep apnea?</h2> 
+                        <h3 style={{paddingLeft: '2.5vw'}}>Treatment for sleep apnea is very individual but could include a CPAP, BIPAP. 
+                            Oral Appliance and even a combination of treatments.
+                            PSAC will help you understand all options that are available. 
+                        </h3>
+                    </div>
+                </div>
+                <div style={{height: '10vh', display: 'flex', justifyContent: 'center'}}>
+                    <h4 style={{textAlign: 'center', alignSelf: 'center'}}>
+                        Do you still have unanswered questions? Schedule a <Link to='/contactus'>complimentary consoltation</Link> to get answers, get tested, or explore your best treatment option.
+                    </h4>
+                </div>  
             </div>
         );
     }
