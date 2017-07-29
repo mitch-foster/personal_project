@@ -5,7 +5,7 @@ import {Button} from 'react-bootstrap'
 
 import NavBar from './NavBar';
 import loading from './loading.gif'
-import mountains from './mountains.jpg'
+
 
 
 class Blog extends Component {
@@ -26,7 +26,7 @@ class Blog extends Component {
           const displayPosts = this.state.posts.map( (posts, i) => {
             return (
                 <div key={i} className='blog_div'>    
-                    <h1 style ={{}}><Link to ={`/blog/${posts.postid}`} className='title_atag'>{posts.title}</Link></h1>
+                    <h1 style ={{fontWeight: '700'}}><Link to ={`/blog/${posts.postid}`} className='title_atag'>{posts.title}</Link></h1>
                     <h4>{posts.date}</h4>
                     <h4>{posts.teaser} <Link to ={`/blog/${posts.postid}`}>Read more --></Link></h4> 
                 </div>
@@ -65,7 +65,8 @@ class Blog extends Component {
                 </div>
                 <div className='posts'>
                     {displayPosts}
-                </div>    
+                </div>  
+                <div style={{height: '10vh'}}></div>  
             </div>
         );
     }

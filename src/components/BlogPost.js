@@ -65,13 +65,16 @@ class BlogPost extends Component {
                     <Link to='/contactus'>
                         <Button className='contact'>SCHEDULE YOUR CONSULTATION</Button>
                     </Link>                 
-                </div>    
-                <div className='blog_div'> 
-                    <h1>{this.state.post[0].title}</h1>
-                    <h4>{this.state.post[0].date}</h4>
-                    <h4>{this.state.post[0].teaser}</h4>
-                    <div dangerouslySetInnerHTML={{__html: this.state.post[0].text}}></div>
+                </div>  
+                <div className='posts'>  
+                    <div className='blog_div'> 
+                        <h1 style={{alignSelf: 'center', fontWeight: '700', textAlign: 'center'}}>{this.state.post[0].title}</h1>
+                        <h4>{this.state.post[0].date}</h4>
+                        <h4>{this.state.post[0].teaser}</h4>
+                        <div dangerouslySetInnerHTML={{__html: this.state.post[0].text}}></div>
+                    </div>
                 </div>
+                <div style={{height: '10vh'}}></div>
             </div>
         );
     }

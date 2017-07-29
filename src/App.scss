@@ -69,6 +69,7 @@ div {
   background-size: cover;
   color: white;
   margin-bottom: 40px;
+  padding-bottom: 15px;
 }
 
 .landing_div {
@@ -118,6 +119,39 @@ div {
 .admin_page_div {
   display: flex;
   justify-content: space-around;
+}
+
+.treatment_options {
+  display: flex; 
+  align-items: center; 
+  flex-direction: column;
+  width: 85vw;
+  padding-left: 15vw;
+}
+
+.treatment {
+  background-color: lightcyan;
+  display: flex; 
+  flex-direction: row;
+  width: 95vw;
+  height: 50vh;
+  padding-left: 5vw;
+  margin-top: 30px;
+}
+
+.treatment_image {
+  background-color: lightgray;
+  width: 25vw;
+  height: 40vh;
+  align-self: center;
+}
+
+.treatment_description {
+  background-color: lightblue;
+  margin-left: 5vw;
+  width: 60vw;
+  display: flex;
+  flex-direction: column;
 }
 
 .blog_div {
