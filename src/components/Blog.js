@@ -39,7 +39,7 @@ class Blog extends Component {
                     <NavBar className='NavBar'/>
                     <div className='mountain_div'>
                         <h1>PERSONAL SLEEP APNEA CARE</h1>
-                        <h2>YOUR Sleep Apnea Specialist</h2>
+                        <h2>Your Sleep Apnea Specialist</h2>
                         <Link to='/contactus'>
                             <Button className='contact'>SCHEDULE YOUR CONSULTATION</Button>
                         </Link>                 

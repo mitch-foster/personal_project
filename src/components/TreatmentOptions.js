@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import {Button} from 'react-bootstrap'
 
-import NavBar from './NavBar'
+import NavBar from './NavBar';
+
 
 class TreatmentOptions extends Component {
     render() {
@@ -11,7 +12,7 @@ class TreatmentOptions extends Component {
                 <NavBar/>
                  <div style ={{marginBottom: '5px'}}className='mountain_div'>
                     <h1>PERSONAL SLEEP APNEA CARE</h1>
-                    <h2>YOUR Sleep Apnea Specialist</h2>
+                    <h2>Your Sleep Apnea Specialist</h2>
                     <Link to='/contactus'>
                         <Button className='contact'>SCHEDULE YOUR CONSULTATION</Button>
                     </Link>                 
@@ -23,7 +24,7 @@ class TreatmentOptions extends Component {
                     </div>
                 </div>
                 <div className='treatment'>   
-                    <div className='treatment_image'></div>
+                    <div className='treatment_image_appliance'></div>
                     <div className='treatment_description'>
                         <h2 style={{alignSelf: 'center'}}>Treatment 1 Name</h2>
                         <h3 style={{textAlign: 'center'}}>Description of the Treatment 1. Description of the Treatment 1. Description of the Treatment 1. Description of the Treatment 1.</h3>
@@ -36,23 +37,10 @@ class TreatmentOptions extends Component {
                     </div>
                 </div>
                 <div className='treatment'>   
-                    <div className='treatment_image'></div>
+                    <div className='treatment_image_mask'></div>
                     <div className='treatment_description'>
                         <h2 style={{alignSelf: 'center'}}>Treatment 2 Name</h2>
                         <h3>Description of the Treatment 2. Description of the Treatment 2. Description of the Treatment 2. Description of the Treatment 2.</h3>
-                        <h3 style={{paddingLeft: '2vw'}}>Pros</h3>
-                        <ul style={{paddingLeft: '5vw'}}>
-                            <li><h3>reason 1</h3></li>
-                            <li><h3>reason 2</h3></li>
-                            <li><h3>reason 3</h3></li>
-                        </ul>
-                    </div>
-                </div>
-                <div className='treatment'>   
-                    <div className='treatment_image'></div>
-                    <div className='treatment_description'>
-                        <h2 style={{alignSelf: 'center'}}>Treatment 3 Name</h2>
-                        <h3>Description of the Treatment 3. Description of the Treatment 3. Description of the Treatment 3. Description of the Treatment 3.</h3>
                         <h3 style={{paddingLeft: '2vw'}}>Pros</h3>
                         <ul style={{paddingLeft: '5vw'}}>
                             <li><h3>reason 1</h3></li>
