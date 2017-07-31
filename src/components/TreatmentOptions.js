@@ -40,8 +40,8 @@ class TreatmentOptions extends Component {
                     <div className='treatment_description'>
                         <h2 style={{alignSelf: 'center'}}>Treatment 2 Name</h2>
                         <h3>Description of the Treatment 2. Description of the Treatment 2. Description of the Treatment 2. Description of the Treatment 2.</h3>
-                        <h3>Pros</h3>
-                        <ul>
+                        <h3 style={{paddingLeft: '2vw'}}>Pros</h3>
+                        <ul style={{paddingLeft: '5vw'}}>
                             <li><h3>reason 1</h3></li>
                             <li><h3>reason 2</h3></li>
                             <li><h3>reason 3</h3></li>
@@ -53,8 +53,8 @@ class TreatmentOptions extends Component {
                     <div className='treatment_description'>
                         <h2 style={{alignSelf: 'center'}}>Treatment 3 Name</h2>
                         <h3>Description of the Treatment 3. Description of the Treatment 3. Description of the Treatment 3. Description of the Treatment 3.</h3>
-                        <h3>Pros</h3>
-                        <ul>
+                        <h3 style={{paddingLeft: '2vw'}}>Pros</h3>
+                        <ul style={{paddingLeft: '5vw'}}>
                             <li><h3>reason 1</h3></li>
                             <li><h3>reason 2</h3></li>
                             <li><h3>reason 3</h3></li>

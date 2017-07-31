@@ -32,7 +32,7 @@ class NavBar extends Component {
                     <Link className='navbar_link' to='/treatmentoptions'>TREATMENT OPTIONS</Link>
                     <Link className='navbar_link' to='/faq'>FAQ</Link>
                     <Link className='navbar_link' to='/blog'>BLOG</Link>
-                    <Link className='navbar_link' to='/contactus'>COUNTACT US</Link>
+                    <Link className='navbar_link' to='/contactus'>CONTACT US</Link>
                     {/* <Link to='/payments'>PAYMENTS</Link> */}
                     {/* <Link to='/news'>NEWS</Link> */}
                     <img    src={menu_bars} 

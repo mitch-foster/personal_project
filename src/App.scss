@@ -1,5 +1,5 @@
 $psac_blue: #0075c1;
-$psac_font: 'Fjalla One';
+$psac_font: 'Monospace';
 $navbar_color: #fffdfd;
 
 html {
@@ -56,8 +56,6 @@ div {
   background-size: cover;
   color: white;
   margin-bottom: 40px;
-  width: 95vw;
-  margin-left: 2.5vw;
 }
 
 .mountain_div {
@@ -72,8 +70,6 @@ div {
   color: white;
   margin-bottom: 40px;
   padding-bottom: 15px;
-  width: 95vw;
-  margin-left: 2.5vw;
 }
 
 .landing_div {
@@ -112,12 +108,22 @@ div {
 }
 
 .navagation_div {
-  height: 50vh;
-  width: 33vw;
+  height: 40vh;
+  width: 30vw;
   background: $navbar_color;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  .btn {
+    font-size: 20px;
+    background: $psac_blue;
+    color: white;
+  }
+  img {
+    width: 110px;
+    margin-bottom: 40px;
+  }
 }
 
 .admin_page_div {
@@ -134,7 +140,7 @@ div {
 }
 
 .treatment {
-  background-color: lightcyan;
+  // background-color: lightcyan;
   display: flex; 
   flex-direction: row;
   width: 95vw;
@@ -145,17 +151,28 @@ div {
 
 .treatment_image {
   background-color: lightgray;
-  width: 25vw;
-  height: 40vh;
+  width: 400px;
+  height: 400px;
   align-self: center;
 }
 
 .treatment_description {
-  background-color: lightblue;
+  // background-color: lightblue;
   margin-left: 5vw;
   width: 60vw;
   display: flex;
   flex-direction: column;
+}
+
+.faq {
+  display: flex; 
+  align-items: center; 
+  flex-direction: column;
+  width: 85vw;
+  padding-left: 15vw;
+  h3 {
+    margin-bottom: 50px;
+  }
 }
 
 .blog_div {

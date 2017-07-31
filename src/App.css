@@ -1,5 +1,5 @@
 html {
-  font-family: "Fjalla One"; }
+  font-family: "Monospace"; }
 
 .NavBar {
   background-color: #fffdfd;
@@ -28,7 +28,7 @@ html {
 
 div {
   color: black;
-  font-family: "Fjalla One"; }
+  font-family: "Monospace"; }
 
 #landing_page {
   background-color: whitesmoke; }
@@ -42,9 +42,7 @@ div {
   background: url(./components/mountains.jpg) no-repeat;
   background-size: cover;
   color: white;
-  margin-bottom: 40px;
-  width: 95vw;
-  margin-left: 2.5vw; }
+  margin-bottom: 40px; }
 
 .mountain_div {
   height: 250px;
@@ -57,9 +55,7 @@ div {
   background-size: cover;
   color: white;
   margin-bottom: 40px;
-  padding-bottom: 15px;
-  width: 95vw;
-  margin-left: 2.5vw; }
+  padding-bottom: 15px; }
 
 .landing_div {
   background-color: whitesmoke; }
@@ -80,7 +76,7 @@ div {
 
 .contact {
   background: #0075c1;
-  font-family: "Fjalla One";
+  font-family: "Monospace";
   color: white;
   border-color: #0075c1; }
 
@@ -91,12 +87,20 @@ div {
   background-color: whitesmoke; }
 
 .navagation_div {
-  height: 50vh;
-  width: 33vw;
+  height: 40vh;
+  width: 30vw;
   background: #fffdfd;
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  flex-direction: column; }
+  .navagation_div .btn {
+    font-size: 20px;
+    background: #0075c1;
+    color: white; }
+  .navagation_div img {
+    width: 110px;
+    margin-bottom: 40px; }
 
 .admin_page_div {
   display: flex;
@@ -110,7 +114,6 @@ div {
   padding-left: 15vw; }
 
 .treatment {
-  background-color: lightcyan;
   display: flex;
   flex-direction: row;
   width: 95vw;
@@ -120,16 +123,24 @@ div {
 
 .treatment_image {
   background-color: lightgray;
-  width: 25vw;
-  height: 40vh;
+  width: 400px;
+  height: 400px;
   align-self: center; }
 
 .treatment_description {
-  background-color: lightblue;
   margin-left: 5vw;
   width: 60vw;
   display: flex;
   flex-direction: column; }
+
+.faq {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 85vw;
+  padding-left: 15vw; }
+  .faq h3 {
+    margin-bottom: 50px; }
 
 .blog_div {
   display: flex;
