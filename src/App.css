@@ -104,9 +104,24 @@ div {
     width: 110px;
     margin-bottom: 40px; }
 
-.admin_page_div {
+.admin {
+  width: 85vw;
+  padding-left: 15vw;
   display: flex;
-  justify-content: space-around; }
+  justify-content: center; }
+
+.admin_navagation_div {
+  display: flex;
+  justify-content: space-around;
+  height: 400px;
+  width: 400px;
+  background: #fffdfd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; }
+  .admin_navagation_div img {
+    width: 110px; }
 
 .treatment_options {
   display: flex;
@@ -125,12 +140,15 @@ div {
 
 .treatment_image_appliance {
   background: url(./components/oral_appliance.jpg) center no-repeat;
+  background-size: contain;
   width: 400px;
   height: 400px;
   align-self: center; }
 
 .treatment_image_mask {
   background: url(./components/cpap_mask.png) center no-repeat;
+  background-size: contain;
+  background-color: white;
   width: 400px;
   height: 400px;
   align-self: center; }
@@ -201,6 +219,30 @@ div {
   width: 40vw;
   margin-bottom: 3vh;
   font-size: 120%; }
+
+.admin_login {
+  background: url(./components/mountains.jpg) no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.login_portal {
+  background: rgba(0, 0, 0, 0.35);
+  color: white;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+  .login_portal img {
+    width: 110px; }
+  .login_portal .btn {
+    background: #0075c1;
+    border-color: #0075c1;
+    color: white;
+    margin-bottom: 5px; }
 
 .button {
   display: inline-block;

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom';
 import {Button} from 'react-bootstrap';
 
 import NavBar from './NavBar';
@@ -8,6 +7,9 @@ import email from './email.png';
 import office from './office.png';
 
 class ContactUs extends Component {
+    componentDidMount() {
+        window.scrollTo(0,0);
+    }
     render() {
         return (
             <div>
@@ -16,9 +18,11 @@ class ContactUs extends Component {
                 <div className='mountain_div'>
                     <h1>PERSONAL SLEEP APNEA CARE</h1>
                     <h2>Your Sleep Apnea Specialist</h2>
-                    <Link to='/contactus'>
-                        <Button className='contact'>SCHEDULE YOUR CONSULTATION</Button>
-                    </Link>                 
+                    {/* <Button className='contact'
+                            onClick={()=> {window.scrollTo(500,0); console.log('click')}}
+                    >
+                        SCHEDULE YOUR CONSULTATION
+                    </Button> */}
                 </div> 
                 <h1 style={{textAlign: 'center', marginBottom: '3vh'}}>Contact Us</h1>
                  <div className='contact_us'>

@@ -26,7 +26,7 @@ class TreatmentOptions extends Component {
                 <div className='treatment'>   
                     <div className='treatment_image_appliance'></div>
                     <div className='treatment_description'>
-                        <h2 style={{alignSelf: 'center'}}>Treatment 1 Name</h2>
+                        <h2 style={{alignSelf: 'center'}}>Oral Applaince</h2>
                         <h3 style={{textAlign: 'center'}}>Description of the Treatment 1. Description of the Treatment 1. Description of the Treatment 1. Description of the Treatment 1.</h3>
                         <h3 style={{paddingLeft: '2vw'}}>Pros</h3>
                         <ul style={{paddingLeft: '5vw'}}>
@@ -39,7 +39,7 @@ class TreatmentOptions extends Component {
                 <div className='treatment'>   
                     <div className='treatment_image_mask'></div>
                     <div className='treatment_description'>
-                        <h2 style={{alignSelf: 'center'}}>Treatment 2 Name</h2>
+                        <h2 style={{alignSelf: 'center'}}>CPAP Oxygen Mask</h2>
                         <h3>Description of the Treatment 2. Description of the Treatment 2. Description of the Treatment 2. Description of the Treatment 2.</h3>
                         <h3 style={{paddingLeft: '2vw'}}>Pros</h3>
                         <ul style={{paddingLeft: '5vw'}}>

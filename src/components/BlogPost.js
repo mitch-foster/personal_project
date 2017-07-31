@@ -74,7 +74,7 @@ class BlogPost extends Component {
                         <div dangerouslySetInnerHTML={{__html: this.state.post[0].text}}></div>
                     </div>
                 </div>
-                <div style={{height: '10vh'}}></div>
+                <div style={{height: '10vh', display: 'flex', justifyContent: 'center'}}><h4 style={{textAlign: 'center', alignSelf: 'center'}}>Want to learn more? <Link to='/contactus'>Contact us</Link> for more info.</h4></div>  
             </div>
         );
     }

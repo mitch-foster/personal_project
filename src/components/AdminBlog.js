@@ -43,8 +43,13 @@ class AdminBlog extends Component {
             return (
                 <div>
                     <AdminNavBar className='NavBar'/>
-                     <img src={loading} alt='Loading'/>
-                </div>    
+                    <div style ={{marginBottom: '5px'}}className='mountain_div'>
+                        <h1>PERSONAL SLEEP APNEA CARE</h1>              
+                    </div>
+                    <div style={{display: 'flex', justifyContent: 'center'}}>
+                        <img src={loading} alt='Loading'/>
+                    </div> 
+                </div>     
             )
         }
         if(this.props.admin === false){
@@ -58,23 +63,34 @@ class AdminBlog extends Component {
         }
         if(this.state.loading === true){
             return (
-                <div>
+                 <div>
                     <AdminNavBar className='NavBar'/>
-                     <img src={loading} alt='Loading'/>
-                </div>    
+                    <div style ={{marginBottom: '5px'}}className='mountain_div'>
+                        <h1>PERSONAL SLEEP APNEA CARE</h1>              
+                    </div>
+                    <div style={{display: 'flex', justifyContent: 'center'}}>
+                        <img src={loading} alt='Loading'/>
+                    </div> 
+                </div>     
             )
         }
         return (
             <div>
                 <AdminNavBar className='NavBar'/>
-                <div style={{height: '250px', background: 'gray'}}></div>   
-                <h1>AdminBlog PAGE</h1>
-                <div>
-                    <Link to = '/adminblogcreatepost'>
-                        <Button>New Post</Button>
-                    </Link>
+                <div style ={{marginBottom: '5px'}}className='mountain_div'>
+                        <h1>PERSONAL SLEEP APNEA CARE</h1>              
                 </div>
-                {displayAdminPosts}
+                <div style={{display: 'flex', justifyContent: 'center'}} >   
+                    <h1>BLOG</h1>
+                </div>
+                <div className='posts'>
+                    <div>
+                        <Link to = '/adminblogcreatepost'>
+                            <Button>New Post</Button>
+                        </Link>
+                    </div>
+                    {displayAdminPosts}
+                </div>
             </div>
         );
     }
