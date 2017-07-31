@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import {Link} from 'react-router-dom';
+import {Link, Redirect} from 'react-router-dom';
 import {Button} from 'react-bootstrap';
 
 import AdminNavBar from './AdminNavBar';
@@ -29,7 +29,7 @@ class AdminBlog extends Component {
     }
 
     render() {
-         const displayAdminPosts = this.state.posts.map( (posts, i) => {
+        const displayAdminPosts = this.state.posts.map( (posts, i) => {
             return (
                 <div key={i} className='blog_div'>    
                     <h1><Link to ={`/adminblog/${posts.postid}`} className='title_atag'>{posts.title}</Link></h1>
@@ -39,7 +39,12 @@ class AdminBlog extends Component {
             );
         })
 
-         if(this.props.loading === true){
+        if(this.props.admin === false){
+            return(
+                <Redirect to='/login'/>
+            )
+        }
+        if(this.props.loading === true){
             return (
                 <div>
                     <AdminNavBar className='NavBar'/>
@@ -50,15 +55,6 @@ class AdminBlog extends Component {
                         <img src={loading} alt='Loading'/>
                     </div> 
                 </div>     
-            )
-        }
-        if(this.props.admin === false){
-            return(
-                <div>
-                    <NavBar className='NavBar'/>
-                    <h1>AdminBlog PAGE</h1>
-                    <h2>NOT ADMIN</h2>
-                </div>
             )
         }
         if(this.state.loading === true){
@@ -91,6 +87,7 @@ class AdminBlog extends Component {
                     </div>
                     {displayAdminPosts}
                 </div>
+                <div style={{height: '10vh'}}></div> 
             </div>
         );
     }

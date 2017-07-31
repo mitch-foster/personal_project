@@ -75,7 +75,7 @@ class Quill extends Component {
                             />
                         </div>
                         <div>
-                            <h4>Post Date (Jan 1, 20XX)</h4>
+                            <h4>Post Date (Jan 1st, 20XX)</h4>
                             <input  className='input' 
                                     type="text" 
                                     value={this.state.date}

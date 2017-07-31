@@ -42,34 +42,45 @@ class AdminBlogEditPost extends Component {
         }
          if(this.props.loading === true){
             return (
-                <div>
+                 <div>
                     <AdminNavBar className='NavBar'/>
-                     <img src={loading} alt='Loading'/>
+                    <div style ={{marginBottom: '5px'}}className='mountain_div'>
+                        <h1>PERSONAL SLEEP APNEA CARE</h1>              
+                    </div>
+                    <div style={{display: 'flex', justifyContent: 'center'}}>
+                        <img src={loading} alt='Loading'/>
+                    </div> 
                 </div>    
             )
         }
           if(this.state.postLoading === true){
             return (
-                <div>
+               <div>
                     <AdminNavBar className='NavBar'/>
-                    <img src={loading} alt='Loading'/>
+                    <div style ={{marginBottom: '5px'}}className='mountain_div'>
+                        <h1>PERSONAL SLEEP APNEA CARE</h1>              
+                    </div>
+                    <div style={{display: 'flex', justifyContent: 'center'}}>
+                        <img src={loading} alt='Loading'/>
+                    </div> 
                 </div>    
             )
         }
-        if(this.props.admin !== true){
+        if(this.props.admin === false){
             return(
-                <div>
-                    <NavBar className='NavBar'/>
-                    <h1>AdminBlog PAGE</h1>
-                    <h2>NOT ADMIN</h2>
-            </div>
+                <Redirect to='/login'/>
             )
         }
         return (
             <div>
                 <AdminNavBar className='NavBar'/>
-                <h1>AdminBlogEditPost PAGE</h1>
-                <div>
+                <div style ={{marginBottom: '5px'}}className='mountain_div'>
+                    <h1>PERSONAL SLEEP APNEA CARE</h1>              
+                </div>
+                 <div style={{display: 'flex', justifyContent: 'center'}} >   
+                    <h1>Edit Post</h1>
+                </div>
+                <div className='posts'>
                      <EditQuill history={this.props.history}
                                 author={this.props.author}
                                 postid={this.state.postid}
@@ -80,7 +91,7 @@ class AdminBlogEditPost extends Component {
                     
                     /> 
                 </div>
-                
+                <div style={{height: '10vh'}}></div> 
             </div>
         );
     }

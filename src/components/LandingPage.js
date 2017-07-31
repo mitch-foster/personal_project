@@ -33,15 +33,21 @@ class LandingPage extends Component {
                 <div className='main_navagation'>
                     <div className='navagation_div'>
                         <img src={question_mark} alt="question mark"/>
-                        <Button>Frequent Questions</Button>
+                        <Link to='/faq'>
+                            <Button>Frequent Questions</Button>
+                        </Link>
                     </div>
                     <div className='navagation_div'>
                         <img src={treatment_options} alt="treatment options"/>
-                        <Button>Treatment Options</Button>
+                        <Link to='/treatmentoptions'>
+                            <Button>Treatment Options</Button>
+                        </Link>
                     </div>
                     <div className='navagation_div'>
                         <img src={smartphone} alt="phone"/>
-                        <Button>Contact Us</Button>
+                        <Link to='/contactus'>
+                            <Button>Contact Us</Button>
+                        </Link>
                     </div>
                 </div>
                 <div style={{height: '10vh'}}></div> 

@@ -3,7 +3,7 @@ import ReactQuill from 'react-quill';
 import axios from 'axios';
 import theme from 'react-quill/dist/quill.snow.css'
 
-class Quill extends Component {
+class EditQuill extends Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -106,4 +106,4 @@ class Quill extends Component {
   }
 }
 
-export default Quill;
+export default EditQuill;

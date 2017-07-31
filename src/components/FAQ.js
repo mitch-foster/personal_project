@@ -5,6 +5,9 @@ import {Button} from 'react-bootstrap'
 import NavBar from './NavBar';
 
 class FAQ extends Component {
+    componentDidMount() {
+        window.scrollTo(0,0);
+    }
     render() {
         return (
             <div>

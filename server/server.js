@@ -31,10 +31,7 @@ massive( connectionString ).then(dbInstance => {
         dbInstance.set_schema()
             .then( () => console.log('Tables have been reset'))
             .catch( err => console.log(err));
-        // dbInstance.host_set_schema()
-        //     .then( () => console.log('Tables have been reset'))
-        //     .catch( err => console.log(err));
-
+        
         passport.use( new Auth0Strategy({
                 domain: config.auth0.domain,
                 clientID: config.auth0.clientID,

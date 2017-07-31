@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 
 import AdminNavBar from './AdminNavBar';
 import NavBar from './NavBar';
@@ -23,11 +23,7 @@ class AdminPage extends Component {
         }
         if(this.props.admin === false){
             return(
-                <div>
-                    <NavBar className='NavBar'/>
-                    <h1>AdminPage PAGE</h1>
-                    <h2>NOT ADMIN</h2>
-            </div>
+                <Redirect to='/login'/>
             )
         }
         return (

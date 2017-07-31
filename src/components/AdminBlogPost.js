@@ -40,6 +40,11 @@ class AdminBlogPost extends Component {
         }
         
     render() {
+        if(this.props.admin === false){
+            return(
+                <Redirect to='/login'/>
+            )
+        }
         if(this.state.redirect === true){
             return (
                 <Redirect to='/adminblog'/>
@@ -47,16 +52,24 @@ class AdminBlogPost extends Component {
         }
         if(this.state.postLoading === true){
             return (
-                <div>
+              <div>
                     <AdminNavBar className='NavBar'/>
-                    <img src={loading} alt='Loading'/>
-                </div>    
+                    <div style ={{marginBottom: '5px'}}className='mountain_div'>
+                        <h1>PERSONAL SLEEP APNEA CARE</h1>              
+                    </div>
+                    <div style={{display: 'flex', justifyContent: 'center'}}>
+                        <img src={loading} alt='Loading'/>
+                    </div> 
+                </div>     
             )
         }
         return (
             <div>
                 <AdminNavBar className='NavBar'/>
-                <div className='blog_div'>
+                 <div style ={{marginBottom: '5px'}}className='mountain_div'>
+                        <h1>PERSONAL SLEEP APNEA CARE</h1>              
+                </div>
+                <div className='posts'>
                     <div>
                         <Link to={`/adminblogeditpost/${this.props.match.params.postid}`}>
                             <Button>Edit Post</Button>   
@@ -64,11 +77,12 @@ class AdminBlogPost extends Component {
                         <Button onClick={this.deletePost}>Delete Post</Button>    
 
                     </div>
-                    <h1>{this.state.post[0].title}</h1>
+                    <h1 style={{alignSelf: 'center', fontWeight: '700', textAlign: 'center'}}>{this.state.post[0].title}</h1>
                     <h4>{this.state.post[0].date}</h4>
                     <h4>{this.state.post[0].teaser}</h4>
                     <div dangerouslySetInnerHTML={{__html: this.state.post[0].text}}></div>
                 </div>
+                <div style={{height: '10vh'}}></div> 
             </div>
         );
     }
