@@ -1,5 +1,5 @@
 html {
-  font-family: "Monospace"; }
+  font-family: "Roboto"; }
 
 .NavBar {
   background-color: #fffdfd;
@@ -28,12 +28,13 @@ html {
 
 div {
   color: black;
-  font-family: "Monospace"; }
+  font-family: "Roboto"; }
 
 #landing_page {
   background-color: whitesmoke; }
 
 .mountain_div_landing_page {
+  font-family: "Fjalla One";
   height: 70vh;
   display: flex;
   flex-direction: column;
@@ -45,6 +46,7 @@ div {
   margin-bottom: 40px; }
 
 .mountain_div {
+  font-family: "Fjalla One";
   height: 250px;
   display: flex;
   flex-direction: column;
@@ -76,7 +78,7 @@ div {
 
 .contact {
   background: #0075c1;
-  font-family: "Monospace";
+  font-family: "Roboto";
   color: white;
   border-color: #0075c1; }
 
@@ -87,8 +89,8 @@ div {
   background-color: whitesmoke; }
 
 .navagation_div {
-  height: 40vh;
-  width: 30vw;
+  height: 400px;
+  width: 400px;
   background: #fffdfd;
   display: flex;
   align-items: center;
@@ -186,6 +188,13 @@ div {
   border-radius: 4px;
   border-color: #ccc; }
 
+@media (max-width: 1250px) {
+  .navagation_div {
+    height: 300px;
+    width: 300px;
+    margin-bottom: 5px;
+    margin-bottom: 15px; } }
+
 @media (max-width: 1200px) {
   .NavBar a {
     font-size: larger;
@@ -203,11 +212,7 @@ div {
   .main_navagation {
     flex-direction: column;
     align-items: center;
-    height: 100vh; }
-  .navagation_div {
-    height: 300px;
-    width: 65vw;
-    margin-bottom: 5px; } }
+    height: 100vh; } }
 
 @media (max-width: 900px) {
   .navbar_link {
@@ -254,7 +259,10 @@ div {
     font-size: 18px; }
   .welcome_text {
     width: 60vw;
-    margin-left: 20vw; } }
+    margin-left: 20vw; }
+  .navagation_div {
+    height: 200px;
+    width: 200px; } }
 
 @media (min-width: 900px) {
   .navbar_hamburger {

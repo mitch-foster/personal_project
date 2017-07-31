@@ -1,5 +1,6 @@
 $psac_blue: #0075c1;
-$psac_font: 'Monospace';
+$psac_font: 'Roboto';
+$psac_header_font: 'Fjalla One';
 $navbar_color: #fffdfd;
 
 html {
@@ -47,6 +48,7 @@ div {
 }
 
 .mountain_div_landing_page {
+  font-family: $psac_header_font;
   height: 70vh;
   display: flex;
   flex-direction: column;
@@ -59,6 +61,7 @@ div {
 }
 
 .mountain_div {
+  font-family: $psac_header_font;
   height: 250px;
   display: flex;
   flex-direction: column;
@@ -108,8 +111,8 @@ div {
 }
 
 .navagation_div {
-  height: 40vh;
-  width: 30vw;
+  height: 400px;
+  width: 400px;
   background: $navbar_color;
   display: flex;
   align-items: center;
@@ -225,6 +228,15 @@ div {
     border-color: #ccc;
 }
 
+@media(max-width: 1250px) {
+  .navagation_div {
+    height: 300px;
+    width: 300px;
+    margin-bottom: 5px;
+    margin-bottom: 15px;
+  }
+}
+
 @media(max-width: 1200px) {
   .NavBar a {
     font-size: larger;
@@ -247,17 +259,13 @@ div {
     font-size: 50px;
   }
 
-  .main_navagation {
+ .main_navagation {
     flex-direction: column;
     align-items: center;
     height: 100vh
   }
-    
-  .navagation_div {
-    height: 300px;
-    width: 65vw;
-    margin-bottom: 5px
-  }
+
+  
 }
 
 @media(max-width: 900px) {
@@ -327,6 +335,11 @@ div {
   .welcome_text {
     width: 60vw;
     margin-left: 20vw;
+  }
+
+  .navagation_div {
+    height: 200px;
+    width: 200px;
   }
 }
  
