@@ -5,6 +5,7 @@ const massive = require('massive');
 const passport = require('passport');
 const Auth0Strategy = require('passport-auth0');
 const cors = require('cors');
+const path = require('path');
 
 const config = require('./config');
 const ctl = require('./controller');
@@ -57,14 +58,14 @@ passport.deserializeUser((user, done) => {
 
 app.get('/auth', passport.authenticate('auth0'));
 app.get('/auth/callback', passport.authenticate('auth0', 
-{ successRedirect: 'http://localhost:3000/admin', failureRedirect: 'http://localhost:3000/login' }));
+{ successRedirect: config.successRedirect, failureRedirect: config.failureRedirect  }));
 app.get('/auth/me', (req, res) => {
   if (req.user) return res.status(200).send(req.user);
   res.status(200).send('No user info')
 })
 app.get('/auth/logout', (req, res) => {
   req.logout();
-  res.redirect('http://localhost:3000/login');
+  res.redirect(config.loginURL);
 })
 
 app.get('/api/getblogposts', ctl.getBlogPosts)
@@ -72,5 +73,9 @@ app.get('/api/getblogpost/:postid', ctl.getBlogPost)
 app.post('/api/createblogpost', ctl.createBlogPost)
 app.put('/api/editblogpost', ctl.editBlogPost)
 app.delete('/api/deleteblogpost', ctl.deleteBlogPost)
+
+app.get('/*', (req, res) => {
+    res.sendFile(path.join(__dirname, '..', 'build', 'index.html'))
+})
 
 app.listen(port, console.log(`Listening on port ${port}.`))

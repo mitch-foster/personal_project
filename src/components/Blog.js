@@ -26,7 +26,7 @@ class Blog extends Component {
           const displayPosts = this.state.posts.map( (posts, i) => {
             return (
                 <div key={i} className='blog_div'>    
-                    <h1 style ={{fontWeight: '700'}}><Link to ={`/blog/${posts.postid}`} className='title_atag'>{posts.title}</Link></h1>
+                    <h1 style ={{fontWeight: '700', fontSize: '23px'}}><Link to ={`/blog/${posts.postid}`} className='title_atag'>{posts.title}</Link></h1>
                     <h4>{posts.date}</h4>
                     <h4>{posts.teaser} <Link to ={`/blog/${posts.postid}`}>Read more --></Link></h4> 
                 </div>
@@ -61,7 +61,7 @@ class Blog extends Component {
                     </Link>                 
                 </div>
                 <div style={{display: 'flex', justifyContent: 'center'}} >   
-                    <h1>BLOG</h1>
+                    <h1 id='blog_heading'>BLOG</h1>
                 </div>
                 <div className='posts'>
                     {displayPosts}

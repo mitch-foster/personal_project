@@ -69,7 +69,7 @@ class BlogPost extends Component {
                 <div className='posts'>  
                     <div className='blog_div'> 
                         <h1 style={{alignSelf: 'center', fontWeight: '700', textAlign: 'center'}}>{this.state.post[0].title}</h1>
-                        <h4>{this.state.post[0].date}</h4>
+                        <h4 style={{alignSelf: 'center'}}>{this.state.post[0].date}</h4>
                         <h4>{this.state.post[0].teaser}</h4>
                         <div dangerouslySetInnerHTML={{__html: this.state.post[0].text}}></div>
                     </div>

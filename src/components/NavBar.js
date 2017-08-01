@@ -46,7 +46,7 @@ class NavBar extends Component {
                     <Link className='navbar_hamburger_link' to='/treatmentoptions'>TREATMENT OPTIONS</Link>
                     <Link className='navbar_hamburger_link' to='/faq'>FAQ</Link>
                     <Link className='navbar_hamburger_link' to='/blog'>BLOG</Link>
-                    <Link className='navbar_hamburger_link' to='/contactus'>COUNTACT US</Link>
+                    <Link className='navbar_hamburger_link' to='/contactus'>CONTACT US</Link>
                 </div> 
             </div>
         );

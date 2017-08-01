@@ -43,7 +43,7 @@ class AdminBlogCreatePost extends Component {
                                     history={this.props.history}
                     />
                 </div>
-                
+                <div style={{height: '10vh'}}></div> 
             </div>
         );
     }

@@ -202,6 +202,9 @@ div {
   display: flex;
   flex-direction: column; }
 
+#blog_heading {
+  font-size: 30px; }
+
 .blog_div p {
   font-size: larger; }
 

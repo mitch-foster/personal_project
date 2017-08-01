@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
-import axios from 'axios';
+// import axios from 'axios';
 
 import LandingPage from './components/LandingPage';
 import News from './components/News';
@@ -26,21 +26,21 @@ class App extends Component {
     super();
 
     this.state = {
-      admin: false,
-      author: null,
-      loading: true,
-      // admin: true,
-      // author: 1,
-      // loading: false,
+      // admin: false,
+      // author: null,
+      // loading: true,
+      admin: true,
+      author: 1,
+      loading: false,
     }
   }
 
 componentDidMount(){
-  axios.get('/auth/me')
-    .then( response => {
-      response.data[0].admin === true ? this.setState({admin: true, author: response.data[0].id, loading: false}) : this.setState({admin: false, author: response.data[0].id, loading: false})
-    }
-  )
+  // axios.get('/auth/me')
+  //   .then( response => {
+  //     response.data[0].admin === true ? this.setState({admin: true, author: response.data[0].id, loading: false}) : this.setState({admin: false, author: response.data[0].id, loading: false})
+  //   }
+  // )
 }
 
   render() {

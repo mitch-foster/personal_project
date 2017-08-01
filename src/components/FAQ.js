@@ -44,7 +44,7 @@ class FAQ extends Component {
                 </div>
                 <div style={{height: '10vh', display: 'flex', justifyContent: 'center'}}>
                     <h4 style={{textAlign: 'center', alignSelf: 'center'}}>
-                        Do you still have unanswered questions? Schedule a <Link to='/contactus'>complimentary consoltation</Link> to get answers, get tested, or explore your best treatment option.
+                        Do you still have unanswered questions? Schedule a <Link to='/contactus'>complimentary consultation</Link> to get answers, get tested, or explore your best treatment option.
                     </h4>
                 </div>  
             </div>
