@@ -302,7 +302,12 @@ div {
     display: block;
     position: absolute;
     right: 25px;
-    top: 35px; }
+    top: 35px; } }
+  @media (max-width: 900px) and (max-width: 320px) {
+    .navbar_hamburger_icon {
+      top: 15px; } }
+
+@media (max-width: 900px) {
   .navbar_hamburger {
     position: fixed;
     background-color: #fffdfd;
@@ -313,7 +318,12 @@ div {
   .navbar_logo {
     position: absolute;
     left: 25px;
-    top: 25px; }
+    top: 25px; } }
+  @media (max-width: 900px) and (max-width: 320px) {
+    .navbar_logo {
+      top: 10px; } }
+
+@media (max-width: 900px) {
   .mountain_div {
     background-position-y: 0px; } }
 
