@@ -30,7 +30,11 @@ class TreatmentOptions extends Component {
                     <div className='treatment_image_appliance'></div>
                     <div className='treatment_description'>
                         <h2 style={{alignSelf: 'center'}}>Oral Applaince</h2>
-                        <h3 style={{textAlign: 'center'}}>Description of the Treatment 1. Description of the Treatment 1. Description of the Treatment 1. Description of the Treatment 1.</h3>
+                        <h3 style={{textAlign: 'center'}}>
+                            Aliqua et dolor ad enim voluptate in irure.
+                            Enim excepteur qui est sit nisi non occaecat cillum ipsum reprehenderit minim adipisicing cillum.
+                            Laborum commodo consequat cupidatat et in mollit minim commodo aliquip veniam occaecat consequat eiusmod sunt.
+                        </h3>
                         <h3 style={{paddingLeft: '2vw'}}>Pros</h3>
                         <ul style={{paddingLeft: '5vw'}}>
                             <li><h3>reason 1</h3></li>
@@ -43,7 +47,11 @@ class TreatmentOptions extends Component {
                     <div className='treatment_image_mask'></div>
                     <div className='treatment_description'>
                         <h2 style={{alignSelf: 'center'}}>CPAP Oxygen Mask</h2>
-                        <h3>Description of the Treatment 2. Description of the Treatment 2. Description of the Treatment 2. Description of the Treatment 2.</h3>
+                        <h3 style={{textAlign: 'center'}}>
+                            Aliqua et dolor ad enim voluptate in irure.
+                            Enim excepteur qui est sit nisi non occaecat cillum ipsum reprehenderit minim adipisicing cillum.
+                            Laborum commodo consequat cupidatat et in mollit minim commodo aliquip veniam occaecat consequat eiusmod sunt.
+                        </h3>
                         <h3 style={{paddingLeft: '2vw'}}>Pros</h3>
                         <ul style={{paddingLeft: '5vw'}}>
                             <li><h3>reason 1</h3></li>
