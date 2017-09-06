@@ -18,11 +18,6 @@ class ContactUs extends Component {
                 <div className='mountain_div'>
                     <h1>PERSONAL SLEEP APNEA CARE</h1>
                     <h2>Your Sleep Apnea Specialist</h2>
-                    {/* <Button className='contact'
-                            onClick={()=> {window.scrollTo(500,0); console.log('click')}}
-                    >
-                        SCHEDULE YOUR CONSULTATION
-                    </Button> */}
                 </div> 
                 <h1 style={{textAlign: 'center', marginBottom: '3vh'}}>Contact Us</h1>
                  <div className='contact_us'>

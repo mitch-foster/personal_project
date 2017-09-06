@@ -134,7 +134,6 @@ div {
   display: flex;
   flex-direction: row;
   width: 95vw;
-  height: 50vh;
   padding-left: 5vw;
   margin-top: 30px; }
 
@@ -181,6 +180,9 @@ div {
   justify-content: space-around;
   width: 85vw;
   padding-left: 15vw; }
+  @media (max-width: 768px) {
+    .contact_us {
+      flex-direction: column; } }
 
 .contact_us_office {
   display: flex;
