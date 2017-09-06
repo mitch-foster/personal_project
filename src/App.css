@@ -136,6 +136,10 @@ div {
   width: 95vw;
   padding-left: 5vw;
   margin-top: 30px; }
+  @media (max-width: 768px) {
+    .treatment {
+      flex-direction: column;
+      align-items: center; } }
 
 .treatment_image_appliance {
   background: url(./components/oral_appliance.jpg) center no-repeat;
@@ -143,6 +147,10 @@ div {
   width: 400px;
   height: 400px;
   align-self: center; }
+  @media (max-width: 768px) {
+    .treatment_image_appliance {
+      width: 200px;
+      height: 200px; } }
 
 .treatment_image_mask {
   background: url(./components/cpap_mask.png) center no-repeat;
@@ -151,6 +159,10 @@ div {
   width: 400px;
   height: 400px;
   align-self: center; }
+  @media (max-width: 768px) {
+    .treatment_image_mask {
+      width: 200px;
+      height: 200px; } }
 
 .treatment_image {
   background: lightgray;
@@ -163,6 +175,11 @@ div {
   width: 60vw;
   display: flex;
   flex-direction: column; }
+  .treatment_description h2 {
+    text-align: center; }
+  @media (max-width: 768px) {
+    .treatment_description {
+      font-size: 15px; } }
 
 .faq {
   display: flex;
